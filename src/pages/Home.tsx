@@ -12,6 +12,7 @@ import { FadeIn, FadeInStagger } from '../components/ui/FadeIn';
 import { ServiceCard } from '../components/ui/ServiceCard';
 import { TelegramIcon, WhatsAppIcon } from '../components/ui/SocialIcons';
 import { Carousel } from '../components/ui/Carousel';
+import aboutImage from '../assets/images/VIA_PRO_about.jpg';
 
 const Home: React.FC = () => {
     const targetRef = useRef<HTMLDivElement>(null);
@@ -118,7 +119,7 @@ const Home: React.FC = () => {
                         <div className="relative h-auto w-full max-w-lg aspect-[4/5] max-h-full bg-gray-200 rounded-2xl overflow-hidden shadow-2xl mx-auto lg:mx-0 lg:ml-auto">
                             {/* Placeholder for Director or Team photo */}
                             <div className="absolute inset-0 bg-gradient-to-tr from-foreground/20 to-transparent z-10"></div>
-                            <img src="/assets/images/square_about_image.png" alt="Construction Management" className="object-cover w-full h-full hover:scale-105 transition-transform duration-700" />
+                            <img src={aboutImage} alt="Construction Management" className="object-cover w-full h-full hover:scale-105 transition-transform duration-700" />
                         </div>
                     </FadeIn>
                 </div>
