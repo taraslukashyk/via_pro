@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
                 <div className="space-y-4">
                     <h2 className="text-3xl font-bold tracking-tighter">{COMPANY_INFO.shortName}</h2>
                     <p className="text-gray-400 text-sm max-w-xs">
-                        ТОВ "{COMPANY_INFO.name}" — надійний партнер в сфері інженерії та проєктування інфраструктури.
+                        {COMPANY_INFO.name} — надійний партнер в сфері інженерії та проєктування інфраструктури.
                     </p>
                 </div>
 
