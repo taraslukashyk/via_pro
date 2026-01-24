@@ -106,13 +106,14 @@ const Home: React.FC = () => {
                                     <p className="text-sm text-foreground/60">Засновник та Директор</p>
                                 </div>
                             </div>
-                            <Button
-                                variant="outline"
-                                className="mt-8 self-start border-accent text-accent hover:bg-accent hover:text-white"
-                                onClick={() => window.location.href = '/career'}
-                            >
-                                Долучитися до команди
-                            </Button>
+                            <Link to="/career">
+                                <Button
+                                    variant="outline"
+                                    className="mt-8 self-start border-accent text-accent hover:bg-accent hover:text-white"
+                                >
+                                    Долучитися до команди
+                                </Button>
+                            </Link>
                         </div>
                     </FadeIn>
                     <FadeIn direction="left" delay={0.2} className="h-full flex items-center">
