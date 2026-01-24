@@ -55,7 +55,7 @@ const Home: React.FC = () => {
                             className="mt-8 text-lg px-8 py-4 bg-accent hover:bg-accent/90"
                             onClick={() => document.getElementById('contacts')?.scrollIntoView({ behavior: 'smooth' })}
                         >
-                            Отримати консультацію зараз
+                            Отримати консультацію прямо зараз
                         </Button>
                     </motion.div>
                 </motion.div>
@@ -215,7 +215,7 @@ const Home: React.FC = () => {
                                 onClick={() => window.open('https://t.me/Taras_luka', '_blank')}
                             >
                                 <TelegramIcon className="w-5 h-5 text-[#2AABEE]" />
-                                Отримати консультацію
+                                Консультація
                             </Button>
                             <Button
                                 variant="outline"
@@ -223,7 +223,7 @@ const Home: React.FC = () => {
                                 onClick={() => window.open('https://wa.me/380685032230', '_blank')}
                             >
                                 <WhatsAppIcon className="w-5 h-5 text-[#25D366]" />
-                                WhatsApp
+                                Написати у WhatsApp
                             </Button>
                         </div>
                     </div>

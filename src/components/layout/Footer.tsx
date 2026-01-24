@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
                 <div className="space-y-4">
                     <h3 className="text-lg font-semibold">Послуги</h3>
                     <ul className="space-y-2 text-gray-400">
-                        <li>Організація руху (ОДР)</li>
+                        <li>Організація дорожнього руху</li>
                         <li>Проєктування</li>
                         <li>Технічний нагляд</li>
                         <li>Консалтинг</li>
