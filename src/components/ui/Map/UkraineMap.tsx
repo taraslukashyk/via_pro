@@ -16,7 +16,7 @@ export const UkraineMap: React.FC = () => {
                         id={String(region.id)}
                         d={region.d}
                         data-name={region.name}
-                        className="stroke-foreground/10 stroke-[0.5] fill-transparent hover:fill-accent/10 transition-all duration-500 ease-out cursor-pointer hover:stroke-accent/50"
+                        className="stroke-foreground/10 stroke-[1.5] fill-transparent hover:fill-accent/10 transition-all duration-500 ease-out cursor-pointer hover:stroke-accent/50"
                     />
                 ))}
             </svg>
