@@ -20,11 +20,12 @@ export const ClusteredMapPin: React.FC<ClusteredMapPinProps> = ({ x, y, projects
                 left: `${x}%`,
                 zIndex: isExpanded ? 50 : 20
             }}
+            onMouseEnter={() => setIsExpanded(true)}
+            onMouseLeave={() => setIsExpanded(false)}
         >
             {/* Clustered Pin Point */}
             <div
                 className="relative cursor-pointer -translate-x-1/2 -translate-y-1/2"
-                onClick={() => setIsExpanded(!isExpanded)}
             >
                 <motion.div
                     initial={{ scale: 0 }}
@@ -48,12 +49,6 @@ export const ClusteredMapPin: React.FC<ClusteredMapPinProps> = ({ x, y, projects
             <AnimatePresence>
                 {isExpanded && (
                     <>
-                        {/* Backdrop to close */}
-                        <div
-                            className="fixed inset-0 z-30"
-                            onClick={() => setIsExpanded(false)}
-                        />
-
                         {/* Cards Container */}
                         <motion.div
                             initial={{ opacity: 0, y: 10, scale: 0.9 }}
