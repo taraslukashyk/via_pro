@@ -12,6 +12,7 @@ import { FadeIn, FadeInStagger } from '../components/ui/FadeIn';
 import { ServiceCard } from '../components/ui/ServiceCard';
 import { TelegramIcon, WhatsAppIcon } from '../components/ui/SocialIcons';
 import { Carousel } from '../components/ui/Carousel';
+import { InteractiveHeroBackground } from '../components/ui/InteractiveHeroBackground';
 import aboutImage from '../assets/images/VIA_PRO_about.jpg';
 
 const Home: React.FC = () => {
@@ -29,6 +30,9 @@ const Home: React.FC = () => {
 
             {/* HERO SECTION */}
             <section ref={targetRef} className="relative h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+                {/* Interactive Background */}
+                <InteractiveHeroBackground />
+
                 <motion.div style={{ opacity, scale }} className="z-10 max-w-5xl mx-auto space-y-6">
                     <motion.h1
                         initial={{ opacity: 0, y: 100 }}

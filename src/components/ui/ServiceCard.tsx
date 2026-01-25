@@ -15,6 +15,8 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, intro, d
     return (
         <motion.div
             layout
+            initial="initial"
+            animate="animate"
             variants={{
                 initial: { opacity: 0, y: 20 },
                 animate: { opacity: 1, y: 0 }
