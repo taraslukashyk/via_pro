@@ -55,7 +55,7 @@ const Home: React.FC = () => {
                             className="mt-8 text-lg px-8 py-4 bg-accent hover:bg-accent/90"
                             onClick={() => document.getElementById('contacts')?.scrollIntoView({ behavior: 'smooth' })}
                         >
-                            Отримати консультацію прямо зараз
+                            Отримати консультацію зараз
                         </Button>
                     </motion.div>
                 </motion.div>
@@ -79,7 +79,7 @@ const Home: React.FC = () => {
                     </motion.div>
 
                     <motion.div variants={{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }}>
-                        <StatsCounter value={160} suffix="+" label="Реалізованих проєктів" />
+                        <StatsCounter value={80} suffix="+" label="Реалізованих проєктів" />
                     </motion.div>
 
                     <motion.div variants={{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }}>
