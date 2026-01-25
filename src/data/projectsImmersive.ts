@@ -7,7 +7,7 @@ export const PROJECTS_IMMERSIVE = [
         description: 'Влаштування транспортної розв\'язки кільцевого типу на перехресті вул. Лесі Українки та вул. Паркова.',
         location: 'м. Вишневе, Київська обл.',
         // Roundabout / circular road intersection
-        backgroundImage: 'https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?q=80&w=2070&auto=format&fit=crop'
+        backgroundImage: '/via_pro/assets/images/visneve-ring.png'
     },
     {
         id: 2,
@@ -43,7 +43,7 @@ export const PROJECTS_IMMERSIVE = [
         description: 'Капітальний ремонт тротуару по вул. Київська з влаштуванням заїзних кишень для громадського транспорту та автостоянок.',
         location: 'м. Вишневе, Київська обл.',
         // Urban sidewalk / city street
-        backgroundImage: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?q=80&w=2064&auto=format&fit=crop'
+        backgroundImage: '/via_pro/assets/images/visneve-walk.png'
     },
     {
         id: 6,

@@ -7,7 +7,7 @@ export const PROJECTS = [
         budget: 'Реалізовано',
         category: 'Дорожня інфраструктура',
         description: 'Влаштування транспортної розв\'язки кільцевого типу на перехресті вул. Лесі Українки та вул. Паркова. Проєкт забезпечив підвищення безпеки руху та пропускної здатності перехрестя.',
-        image: 'https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?q=80&w=2070&auto=format&fit=crop',
+        image: '/via_pro/assets/images/visneve-ring.png',
         // Geographic coordinates (lat/lng)
         lat: 50.3865,
         lng: 30.3600
@@ -56,7 +56,7 @@ export const PROJECTS = [
         budget: 'В роботі',
         category: 'Міський благоустрій',
         description: 'Капітальний ремонт тротуару по вул. Київська з влаштуванням заїзних кишень для громадського транспорту та автостоянок. Створено інклюзивний та комфортний простір для пішоходів.',
-        image: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?q=80&w=2064&auto=format&fit=crop',
+        image: '/via_pro/assets/images/visneve-walk.png',
         // Slightly offset from project 1 to avoid overlap on the map
         lat: 50.3920,
         lng: 30.3750
