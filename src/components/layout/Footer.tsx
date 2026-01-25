@@ -58,7 +58,21 @@ export const Footer: React.FC = () => {
             </div>
 
             <div className="container mx-auto mt-16 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-                <p>&copy; {new Date().getFullYear()} {t.company.name}. {t.footer.copyright}</p>
+                <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4">
+                    <p>&copy; {new Date().getFullYear()} {t.company.name}. {t.footer.copyright}</p>
+                    <span className="hidden md:inline">•</span>
+                    <p>
+                        Created by{' '}
+                        <a
+                            href="https://www.linkedin.com/in/taras-lukashyk/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-white transition-colors underline"
+                        >
+                            Taras Lukashyk
+                        </a>
+                    </p>
+                </div>
             </div>
         </footer>
     );
