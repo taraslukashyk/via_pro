@@ -152,29 +152,46 @@ export const Header: React.FC<HeaderProps> = ({ isOverlay = false }) => {
                         exit={{ opacity: 0 }}
                         className="fixed inset-0 z-40 bg-background flex flex-col items-center justify-center space-y-8 md:hidden"
                     >
-                        {navLinks.map((link, index) => {
-                            const isAnchor = link.href.startsWith('#');
-                            const to = isAnchor
-                                ? (isHome ? link.href : `/${link.href}`)
-                                : link.href;
+                        <motion.nav
+                            className="flex flex-col items-center gap-6 mb-8"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2 }}
+                        >
+                            {navLinks.map((link, index) => {
+                                const isAnchor = link.href.startsWith('#');
+                                const to = isAnchor
+                                    ? (isHome ? link.href : `/${link.href}`)
+                                    : link.href;
 
-                            return (
-                                <MotionLink
-                                    key={link.name}
-                                    to={to}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.1 + index * 0.1 }}
-                                    className="text-3xl font-medium text-foreground"
-                                    onClick={(e) => {
-                                        if (isAnchor) handleNavClick(e, link.href);
-                                        setIsMobileMenuOpen(false);
-                                    }}
-                                >
-                                    {link.name}
-                                </MotionLink>
-                            );
-                        })}
+                                return (
+                                    <MotionLink
+                                        key={link.name}
+                                        to={to}
+                                        onClick={(e) => {
+                                            if (isAnchor) handleNavClick(e, link.href);
+                                            setIsMobileMenuOpen(false);
+                                        }}
+                                        className="text-2xl font-medium text-[#3E2723] hover:text-accent transition-colors"
+                                        initial={{ opacity: 0, x: -20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: 0.1 * index }}
+                                    >
+                                        {link.name}
+                                    </MotionLink>
+                                );
+                            })}
+
+                            {/* Language Switcher in Mobile Menu */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: 0.1 * navLinks.length }}
+                                className="mt-4"
+                            >
+                                <LanguageSwitcher isOverlay={false} />
+                            </motion.div>
+                        </motion.nav>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
