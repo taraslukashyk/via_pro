@@ -14,8 +14,12 @@ import { TelegramIcon, WhatsAppIcon } from '../components/ui/SocialIcons';
 import { Carousel } from '../components/ui/Carousel';
 import { InteractiveHeroBackground } from '../components/ui/InteractiveHeroBackground';
 import aboutImage from '../assets/images/VIA_PRO_about.jpg';
+import { useTranslation } from '../translations';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Home: React.FC = () => {
+    const t = useTranslation();
+    const { language } = useLanguage();
     const targetRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: targetRef,
@@ -48,7 +52,7 @@ const Home: React.FC = () => {
                         transition={{ delay: 0.3, duration: 0.8 }}
                         className="text-xl md:text-2xl text-foreground/60 max-w-2xl mx-auto font-light"
                     >
-                        Інженерна точність. Надійне плече.
+                        {t.hero.tagline}
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -59,7 +63,7 @@ const Home: React.FC = () => {
                             className="mt-8 text-lg px-8 py-4 bg-accent hover:bg-accent/90"
                             onClick={() => document.getElementById('contacts')?.scrollIntoView({ behavior: 'smooth' })}
                         >
-                            Отримати консультацію зараз
+                            {t.hero.cta}
                         </Button>
                     </motion.div>
                 </motion.div>
@@ -79,15 +83,15 @@ const Home: React.FC = () => {
 
                 <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center relative z-10 items-center justify-center">
                     <motion.div variants={{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }}>
-                        <StatsCounter value={5} suffix="+" label="Років на ринку" />
+                        <StatsCounter value={5} suffix="+" label={t.stats.yearsLabel} />
                     </motion.div>
 
                     <motion.div variants={{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }}>
-                        <StatsCounter value={80} suffix="+" label="Реалізованих проєктів" />
+                        <StatsCounter value={80} suffix="+" label={t.stats.projectsLabel} />
                     </motion.div>
 
                     <motion.div variants={{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }}>
-                        <StatsCounter value={30} suffix="%" label="Щорічне зростання" />
+                        <StatsCounter value={30} suffix="%" label={t.stats.growthLabel} />
                     </motion.div>
                 </FadeInStagger>
             </Section>
@@ -97,17 +101,17 @@ const Home: React.FC = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto items-center">
                     <FadeIn direction="right" className="h-full flex flex-col justify-center">
                         <div>
-                            <span className="text-accent font-medium tracking-widest uppercase mb-4 block">Про компанію</span>
+                            <span className="text-accent font-medium tracking-widest uppercase mb-4 block">{t.about.label}</span>
                             <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                                Ми створюємо інфраструктуру майбутнього
+                                {t.about.heading}
                             </h2>
                             <p className="text-lg text-foreground/70 mb-6">
-                                Компанія «ВІА ПРО» — це поєднання інженерного досвіду, сучасних технологій та бездоганної репутації. Заснована у 2021 році, ми пройшли шлях від локального бюро до потужного гравця на ринку проєктування інфраструктурних об'єктів та в сфері інжинірингу.
+                                {t.about.description}
                             </p>
                             <div className="flex items-center gap-4 border-l-4 border-accent pl-6 py-2 bg-muted/30 rounded-r-lg">
                                 <div>
-                                    <p className="font-bold text-lg">{COMPANY_INFO.director}</p>
-                                    <p className="text-sm text-foreground/60">Засновник та Директор</p>
+                                    <p className="font-bold text-lg">{t.about.directorName}</p>
+                                    <p className="text-sm text-foreground/60">{t.about.founderRole}</p>
                                 </div>
                             </div>
                             <Link to="/career">
@@ -115,7 +119,7 @@ const Home: React.FC = () => {
                                     variant="outline"
                                     className="mt-8 self-start border-accent text-accent hover:bg-accent hover:text-white"
                                 >
-                                    Долучитися до команди
+                                    {t.about.joinTeamBtn}
                                 </Button>
                             </Link>
                         </div>
@@ -134,14 +138,14 @@ const Home: React.FC = () => {
             <Section id="services" className="bg-white py-32 rounded-3xl mx-4 my-8" noAnimation>
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <FadeIn>
-                        <span className="text-accent font-medium tracking-widest uppercase mb-4 block">Діяльність</span>
-                        <h2 className="text-4xl md:text-5xl font-bold">Комплексні рішення</h2>
+                        <span className="text-accent font-medium tracking-widest uppercase mb-4 block">{t.services.label}</span>
+                        <h2 className="text-4xl md:text-5xl font-bold">{t.services.heading}</h2>
                     </FadeIn>
                 </div>
 
                 <div className="px-4">
                     <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
-                        {COMPANY_INFO.services.map((service, index) => (
+                        {COMPANY_INFO.services[language].map((service, index) => (
                             <ServiceCard
                                 key={service.id}
                                 index={index}
@@ -160,18 +164,18 @@ const Home: React.FC = () => {
                     <FadeIn className="w-full">
                         <div className="flex flex-col md:flex-row justify-between items-end w-full">
                             <div>
-                                <span className="text-accent font-medium tracking-widest uppercase mb-4 block">Портфоліо</span>
-                                <h2 className="text-4xl md:text-5xl font-bold">Реалізовані кейси</h2>
+                                <span className="text-accent font-medium tracking-widest uppercase mb-4 block">{t.projects.label}</span>
+                                <h2 className="text-4xl md:text-5xl font-bold">{t.projects.heading}</h2>
                             </div>
                             <Link to="/projects">
-                                <Button variant="outline" className="mt-8 md:mt-0 hidden md:flex">Всі проєкти</Button>
+                                <Button variant="outline" className="mt-8 md:mt-0 hidden md:flex">{t.projects.allProjectsBtn}</Button>
                             </Link>
                         </div>
                     </FadeIn>
                 </div>
 
                 <Carousel className="w-full">
-                    {PROJECTS.map((project) => (
+                    {PROJECTS[language].map((project) => (
                         <div
                             key={project.id}
                             className="relative group aspect-[16/10] overflow-hidden rounded-3xl border border-white/10"
@@ -199,7 +203,7 @@ const Home: React.FC = () => {
 
                 <div className="px-4 mt-8 md:hidden text-center">
                     <Link to="/projects">
-                        <Button variant="outline" className="w-full">Всі проєкти</Button>
+                        <Button variant="outline" className="w-full">{t.projects.allProjectsBtn}</Button>
                     </Link>
                 </div>
             </Section>
@@ -211,15 +215,15 @@ const Home: React.FC = () => {
             <Section id="contacts" className="py-32 bg-foreground text-background text-center rounded-t-[3rem] mx-4 mt-12 mb-0" noAnimation>
                 <FadeIn>
                     <div className="max-w-4xl mx-auto space-y-8">
-                        <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">Готові до співпраці?</h2>
-                        <p className="text-xl text-white/60">Зв'яжіться з нами для обговорення вашого наступного проєкту.</p>
+                        <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">{t.contact.heading}</h2>
+                        <p className="text-xl text-white/60">{t.contact.subheading}</p>
                         <div className="flex flex-col md:flex-row gap-4 justify-center pt-8">
                             <Button
                                 className="bg-white text-foreground hover:bg-gray-200 gap-2"
                                 onClick={() => window.open('https://t.me/Taras_luka', '_blank')}
                             >
                                 <TelegramIcon className="w-5 h-5 text-[#2AABEE]" />
-                                Консультація
+                                {t.contact.consultationBtn}
                             </Button>
                             <Button
                                 variant="outline"
@@ -227,7 +231,7 @@ const Home: React.FC = () => {
                                 onClick={() => window.open('https://wa.me/380685032230', '_blank')}
                             >
                                 <WhatsAppIcon className="w-5 h-5 text-[#25D366]" />
-                                Написати у WhatsApp
+                                {t.contact.whatsappBtn}
                             </Button>
                         </div>
                     </div>

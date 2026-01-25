@@ -3,10 +3,14 @@ import { motion } from 'framer-motion';
 import { ArrowDown, ChevronUp } from 'lucide-react';
 import { PROJECTS_IMMERSIVE } from '../data/projectsImmersive';
 import { ImmersiveProjectCard } from '../components/ui/ImmersiveProjectCard';
+import { useTranslation } from '../translations';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Projects: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [showScrollTop, setShowScrollTop] = React.useState(false);
+    const t = useTranslation();
+    const { language } = useLanguage();
 
     useEffect(() => {
         const container = containerRef.current;
@@ -81,7 +85,7 @@ const Projects: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        Портфоліо
+                        {t.projects.label}
                     </motion.span>
 
                     <motion.h1
@@ -90,10 +94,10 @@ const Projects: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        Реалізовані
+                        {t.projects.heading.split(' ')[0]}
                         <br />
                         <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-                            кейси
+                            {t.projects.heading.split(' ')[1]}
                         </span>
                     </motion.h1>
 
@@ -103,8 +107,7 @@ const Projects: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                     >
-                        Інженерна майстерність у кожному проєкті. Від концепції до реалізації —
-                        досвід, який формує інфраструктуру України.
+                        {t.projectsPage.description1}
                     </motion.p>
 
                     <motion.p
@@ -113,7 +116,7 @@ const Projects: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.5 }}
                     >
-                        На розгляд Вам представлені декілька проєктів із числа успішно реалізованих.
+                        {t.projectsPage.description2}
                     </motion.p>
 
                     {/* Stats */}
@@ -125,15 +128,15 @@ const Projects: React.FC = () => {
                     >
                         <div className="text-center">
                             <div className="text-4xl md:text-5xl font-bold text-white mb-2">7</div>
-                            <div className="text-white/50 text-sm uppercase tracking-wider">Проєктів</div>
+                            <div className="text-white/50 text-sm uppercase tracking-wider">{t.projectsPage.stats.projects}</div>
                         </div>
                         <div className="text-center">
                             <div className="text-4xl md:text-5xl font-bold text-white mb-2">3</div>
-                            <div className="text-white/50 text-sm uppercase tracking-wider">Області</div>
+                            <div className="text-white/50 text-sm uppercase tracking-wider">{t.projectsPage.stats.regions}</div>
                         </div>
                         <div className="text-center">
                             <div className="text-4xl md:text-5xl font-bold text-white mb-2">100%</div>
-                            <div className="text-white/50 text-sm uppercase tracking-wider">Успіху</div>
+                            <div className="text-white/50 text-sm uppercase tracking-wider">{t.projectsPage.stats.success}</div>
                         </div>
                     </motion.div>
 
@@ -145,7 +148,7 @@ const Projects: React.FC = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1, duration: 0.6 }}
                     >
-                        <span className="text-sm uppercase tracking-widest">Дивитись проєкти</span>
+                        <span className="text-sm uppercase tracking-widest">{t.projectsPage.viewProjects}</span>
                         <motion.div
                             animate={{ y: [0, 8, 0] }}
                             transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
@@ -160,7 +163,7 @@ const Projects: React.FC = () => {
             </section>
 
             {/* Project Slides */}
-            {PROJECTS_IMMERSIVE.map((project, index) => (
+            {PROJECTS_IMMERSIVE[language].map((project, index) => (
                 <ImmersiveProjectCard
                     key={project.id}
                     project={project}
@@ -182,7 +185,7 @@ const Projects: React.FC = () => {
                         transition={{ duration: 0.8 }}
                         viewport={{ once: false }}
                     >
-                        Наступним тут може бути Ваш проєкт
+                        {t.projectsPage.nextProject}
                     </motion.h2>
 
                     <motion.p
@@ -192,7 +195,7 @@ const Projects: React.FC = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: false }}
                     >
-                        Реалізуємо швидко, якісно, згідно чинних нормативних та правових вимог
+                        {t.projectsPage.nextProjectSubheading}
                     </motion.p>
                 </div>
             </section>

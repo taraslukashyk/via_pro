@@ -6,6 +6,7 @@ import Career from './pages/Career';
 import Projects from './pages/Projects';
 import { ScrollToTop } from './components/ui/ScrollToTop';
 import { ScrollRestoration } from './components/ui/ScrollRestoration';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 // Layout wrapper to conditionally show Header/Footer
 function Layout({ children }: { children: React.ReactNode }) {
@@ -34,15 +35,17 @@ function Layout({ children }: { children: React.ReactNode }) {
 function App() {
   // ... (keeping existing logic)
   return (
-    <Router basename={import.meta.env.BASE_URL}>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/career" element={<Career />} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
-      </Layout>
-    </Router>
+    <LanguageProvider>
+      <Router basename={import.meta.env.BASE_URL}>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/career" element={<Career />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
+        </Layout>
+      </Router>
+    </LanguageProvider>
   );
 }
 

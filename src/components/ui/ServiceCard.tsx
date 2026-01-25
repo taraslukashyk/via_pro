@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ChevronDown } from 'lucide-react';
+import { useTranslation } from '../../translations';
 
 interface ServiceCardProps {
     index: number;
@@ -11,6 +12,7 @@ interface ServiceCardProps {
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, intro, details }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const t = useTranslation();
 
     return (
         <motion.div
@@ -58,7 +60,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, intro, d
                             transition={{ duration: 0.3, ease: "easeInOut" }}
                         >
                             <div className="pt-4 border-t border-accent/10 space-y-3">
-                                <h4 className="text-accent text-sm font-bold uppercase tracking-widest mb-3">Детально:</h4>
+                                <h4 className="text-accent text-sm font-bold uppercase tracking-widest mb-3">{t.services.detailedBtn}:</h4>
                                 <ul className="space-y-3">
                                     {details.map((item, idx) => (
                                         <motion.li
@@ -79,7 +81,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, intro, d
 
                 {/* Toggle Button Text */}
                 <motion.div layout="position" className="mt-auto pt-6 flex items-center text-accent font-bold text-sm uppercase tracking-wider group-hover:translate-x-2 transition-transform">
-                    {isOpen ? 'Згорнути' : 'Детальніше'}
+                    {isOpen ? t.services.collapseBtn : t.services.detailsBtn}
                     <ArrowRight size={16} className={`ml-2 transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`} />
                 </motion.div>
             </motion.div>

@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '../ui/Button';
 import logo from '../../assets/logo.png';
 import { TelegramIcon, WhatsAppIcon, YouTubeIcon } from '../ui/SocialIcons';
+import { LanguageSwitcher } from '../ui/LanguageSwitcher';
+import { useTranslation } from '../../translations';
 
 const MotionLink = motion(Link);
 
@@ -17,6 +19,7 @@ export const Header: React.FC<HeaderProps> = ({ isOverlay = false }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
+    const t = useTranslation();
 
     const isHome = location.pathname === '/';
 
@@ -50,11 +53,11 @@ export const Header: React.FC<HeaderProps> = ({ isOverlay = false }) => {
     };
 
     const navLinks = [
-        { name: 'Про компанію', href: '#about' },
-        { name: 'Послуги', href: '#services' },
-        { name: 'Проєкти', href: '/projects' },
-        { name: 'Кар\'єра', href: '/career' },
-        { name: 'Контакти', href: '#contacts' },
+        { name: t.nav.about, href: '#about' },
+        { name: t.nav.services, href: '#services' },
+        { name: t.nav.projects, href: '/projects' },
+        { name: t.nav.career, href: '/career' },
+        { name: t.nav.contacts, href: '#contacts' },
     ];
 
     // Determine styling based on overlay mode
@@ -123,6 +126,7 @@ export const Header: React.FC<HeaderProps> = ({ isOverlay = false }) => {
 
                         {/* Social Icons */}
                         <div className="hidden md:flex items-center gap-4 z-50">
+                            <LanguageSwitcher isOverlay={isOverlay} />
                             <a href="https://t.me/Taras_luka" target="_blank" rel="noopener noreferrer" className={`${socialIconClass} transition-colors hover:scale-110 duration-300`}><TelegramIcon className="w-5 h-5" /></a>
                             <a href="https://wa.me/380685032230" target="_blank" rel="noopener noreferrer" className={`${socialIconClass} transition-colors hover:scale-110 duration-300`}><WhatsAppIcon className="w-5 h-5" /></a>
                             <a href="https://www.youtube.com/@taraslukashyk" target="_blank" rel="noopener noreferrer" className={`${isOverlay ? 'text-white/60 hover:text-red-400' : 'text-foreground/60 hover:text-red-500'} transition-colors hover:scale-110 duration-300`}><YouTubeIcon className="w-5 h-5" /></a>
@@ -176,7 +180,7 @@ export const Header: React.FC<HeaderProps> = ({ isOverlay = false }) => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5 }}
                         >
-                            <Button onClick={() => setIsMobileMenuOpen(false)}>Зв'язатись</Button>
+                            <Button onClick={() => setIsMobileMenuOpen(false)}>{t.common.contact}</Button>
                         </motion.div>
                     </motion.div>
                 )}

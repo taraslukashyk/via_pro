@@ -5,6 +5,8 @@ import { MapPin } from './MapPin';
 import { ClusteredMapPin } from './ClusteredMapPin';
 import { PROJECTS, latLngToSvgCoords } from '../../../data/projects';
 import type { Project } from '../../../data/projects';
+import { useTranslation } from '../../../translations';
+import { useLanguage } from '../../../contexts/LanguageContext';
 
 // Distance threshold for clustering pins (in percentage of map size)
 const CLUSTER_THRESHOLD = 3;
@@ -58,15 +60,17 @@ function clusterProjects(projects: Project[]): ClusterGroup[] {
 }
 
 export const MapSection: React.FC = () => {
-    const clusters = useMemo(() => clusterProjects(PROJECTS as Project[]), []);
+    const t = useTranslation();
+    const { language } = useLanguage();
+    const clusters = useMemo(() => clusterProjects(PROJECTS[language] as Project[]), [language]);
 
     return (
         <Section className="py-20 relative overflow-hidden">
             <div className="text-center mb-16 relative z-10">
-                <span className="text-accent font-medium tracking-widest uppercase mb-4 block">Географія</span>
-                <h2 className="text-4xl md:text-5xl font-bold">Масштаб діяльності</h2>
+                <span className="text-accent font-medium tracking-widest uppercase mb-4 block">{t.geography.heading}</span>
+                <h2 className="text-4xl md:text-5xl font-bold">{t.geography.subheading}</h2>
                 <p className="mt-4 text-foreground/60 max-w-xl mx-auto">
-                    Ми реалізуємо проєкти по всій території України, забезпечуючи якісний нагляд та проєктування.
+                    {t.geography.description}
                 </p>
             </div>
 
