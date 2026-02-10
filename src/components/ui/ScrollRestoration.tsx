@@ -9,8 +9,26 @@ export const ScrollRestoration: React.FC = () => {
     const { pathname, hash } = useLocation();
 
     useEffect(() => {
-        // Only scroll to top if there's no hash (anchor link)
-        if (!hash) {
+        const scrollToHash = () => {
+            const element = document.getElementById(hash.replace('#', ''));
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                return true;
+            }
+            return false;
+        };
+
+        if (hash) {
+            // Try immediately
+            if (!scrollToHash()) {
+                // Retry after a short delay to allow content to load
+                const timer = setTimeout(() => {
+                    scrollToHash();
+                }, 100);
+                return () => clearTimeout(timer);
+            }
+        } else {
+            // Scroll to top if no hash
             window.scrollTo({ top: 0, behavior: 'instant' });
         }
     }, [pathname, hash]);

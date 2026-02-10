@@ -18,15 +18,15 @@ export const en: TranslationKeys = {
 
     // Hero Section
     hero: {
-        tagline: 'Engineering precision. Reliable partner.',
+        tagline: 'Engineering Precision. Trusted Partner.',
         cta: 'Get consultation now',
     },
 
     // Stats Section
     stats: {
-        yearsLabel: 'Years on the market',
-        projectsLabel: 'Completed projects',
-        growthLabel: 'Annual growth',
+        yearsLabel: 'Years in Business',
+        projectsLabel: 'Completed Projects',
+        growthLabel: 'Annual Growth',
     },
 
     // About Section
@@ -41,8 +41,8 @@ export const en: TranslationKeys = {
 
     // Services Section
     services: {
-        label: 'Activities',
-        heading: 'Comprehensive solutions',
+        label: 'Our Expertise',
+        heading: 'Comprehensive Solutions',
         detailsBtn: 'More details',
         detailedBtn: 'Detailed',
         collapseBtn: 'Collapse',
@@ -51,7 +51,7 @@ export const en: TranslationKeys = {
     // Projects Section
     projects: {
         label: 'Portfolio',
-        heading: 'Completed cases',
+        heading: 'Success Stories',
         allProjectsBtn: 'All projects',
     },
 
@@ -71,7 +71,7 @@ export const en: TranslationKeys = {
         navServices: 'Activities',
         navProjects: 'Projects',
         servicesTitle: 'Services',
-        service1: 'Traffic organization',
+        service1: 'Traffic Management',
         service2: 'Design',
         service3: 'Technical supervision',
         service4: 'Consulting',
@@ -88,8 +88,8 @@ export const en: TranslationKeys = {
         readyText: 'Leave your contacts and we will contact you to discuss cooperation opportunities.',
         joinBtn: 'Join us',
         vacancyLabel: 'Open vacancy',
-        vacancyTitle: 'Road Design Engineer / Traffic Organization',
-        vacancyDescription: 'We are looking for a specialist to develop road infrastructure (design documentation) and traffic organization schemes. The work includes design, support and communication with clients.',
+        vacancyTitle: 'Highway Design Engineer / Traffic Management',
+        vacancyDescription: 'We are looking for a specialist to develop road infrastructure (detailed design) and traffic management plans. The work includes design, support and communication with clients.',
         vacancyLocation: 'Irpin office / remote (part-time possible)',
         applyBtn: 'Apply',
         vacancyQuote: '"Share your experience — let\'s build the future together"',
@@ -106,7 +106,7 @@ export const en: TranslationKeys = {
         allProjects: 'All projects',
         viewProjects: 'View projects',
         nextProject: 'Your project could be next here',
-        nextProjectSubheading: 'We implement quickly, qualitatively, in accordance with current regulatory and legal requirements',
+        nextProjectSubheading: 'Delivered efficiently, to the highest quality standards, and in full compliance with current regulations',
         description1: 'Engineering excellence in every project. From concept to implementation — experience that shapes Ukraine\'s infrastructure.',
         description2: 'Here are several projects from our successfully completed portfolio.',
         stats: {
