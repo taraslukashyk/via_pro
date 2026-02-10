@@ -14,7 +14,7 @@ const Career: React.FC = () => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         // Construct telegram message
-        const message = `Доброго дня! Я зацікавлений у вакансії. Мій номер: ${phoneNumber}`;
+        const message = `Доброго дня! Я зацікавлений у вакансії ${t.career.vacancyTitle}. Мій номер: ${phoneNumber}`;
         const telegramUrl = `https://t.me/me_ppo?text=${encodeURIComponent(message)}`;
         window.open(telegramUrl, '_blank');
         setIsModalOpen(false);
