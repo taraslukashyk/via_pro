@@ -127,8 +127,8 @@ export const Header: React.FC<HeaderProps> = ({ isOverlay = false }) => {
                         {/* Social Icons */}
                         <div className="hidden md:flex items-center gap-4 z-50">
                             <LanguageSwitcher isOverlay={isOverlay} />
-                            <a href="https://t.me/Taras_luka" target="_blank" rel="noopener noreferrer" className={`${socialIconClass} transition-colors hover:scale-110 duration-300`}><TelegramIcon className="w-5 h-5" /></a>
-                            <a href="https://wa.me/380685032230" target="_blank" rel="noopener noreferrer" className={`${socialIconClass} transition-colors hover:scale-110 duration-300`}><WhatsAppIcon className="w-5 h-5" /></a>
+                            <a href="https://t.me/me_ppo" target="_blank" rel="noopener noreferrer" className={`${socialIconClass} transition-colors hover:scale-110 duration-300`}><TelegramIcon className="w-5 h-5" /></a>
+                            <a href="https://wa.me/380634535983" target="_blank" rel="noopener noreferrer" className={`${socialIconClass} transition-colors hover:scale-110 duration-300`}><WhatsAppIcon className="w-5 h-5" /></a>
                             <a href="https://www.youtube.com/@taraslukashyk" target="_blank" rel="noopener noreferrer" className={`${isOverlay ? 'text-white/60 hover:text-red-400' : 'text-foreground/60 hover:text-red-500'} transition-colors hover:scale-110 duration-300`}><YouTubeIcon className="w-5 h-5" /></a>
                         </div>
 

@@ -215,7 +215,7 @@ const Home: React.FC = () => {
                         <div className="flex flex-col md:flex-row gap-4 justify-center pt-8">
                             <Button
                                 className="bg-white text-foreground hover:bg-gray-200 gap-2"
-                                onClick={() => window.open('https://t.me/Taras_luka', '_blank')}
+                                onClick={() => window.open('https://t.me/me_ppo', '_blank')}
                             >
                                 <TelegramIcon className="w-5 h-5 text-[#2AABEE]" />
                                 {t.contact.consultationBtn}
@@ -223,7 +223,7 @@ const Home: React.FC = () => {
                             <Button
                                 variant="outline"
                                 className="border-white text-white hover:bg-white hover:text-foreground gap-2"
-                                onClick={() => window.open('https://wa.me/380685032230', '_blank')}
+                                onClick={() => window.open('https://wa.me/380634535983', '_blank')}
                             >
                                 <WhatsAppIcon className="w-5 h-5 text-[#25D366]" />
                                 {t.contact.whatsappBtn}

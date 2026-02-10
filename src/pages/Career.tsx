@@ -15,7 +15,7 @@ const Career: React.FC = () => {
         e.preventDefault();
         // Construct telegram message
         const message = `Доброго дня! Я зацікавлений у вакансії. Мій номер: ${phoneNumber}`;
-        const telegramUrl = `https://t.me/Taras_luka?text=${encodeURIComponent(message)}`;
+        const telegramUrl = `https://t.me/me_ppo?text=${encodeURIComponent(message)}`;
         window.open(telegramUrl, '_blank');
         setIsModalOpen(false);
     };

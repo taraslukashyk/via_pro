@@ -73,7 +73,7 @@ export const TransformingConsultationButton: React.FC<TransformingConsultationBu
                     <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        onClick={() => window.open('https://t.me/Taras_luka', '_blank')}
+                        onClick={() => window.open('https://t.me/me_ppo', '_blank')}
                         className="relative z-10 bg-accent text-white shadow-2xl flex items-center justify-center rounded-full"
                         style={{ width: '80px', height: '80px' }}
                     >
