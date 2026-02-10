@@ -54,7 +54,7 @@ export const Header: React.FC<HeaderProps> = ({ isOverlay = false }) => {
 
     const navLinks = [
         { name: t.nav.about, href: '#about' },
-        { name: t.nav.services, href: '#services' },
+        { name: t.nav.services, href: '/via_pro/projects' },
         { name: t.nav.projects, href: '/projects' },
         { name: t.nav.career, href: '/career' },
         { name: t.nav.contacts, href: '#contacts' },

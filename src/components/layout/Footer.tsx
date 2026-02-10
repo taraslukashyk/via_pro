@@ -30,10 +30,10 @@ export const Footer: React.FC = () => {
                 <div className="space-y-4">
                     <h3 className="text-lg font-semibold">{t.footer.servicesTitle}</h3>
                     <ul className="space-y-2 text-gray-400">
-                        <li>{t.footer.service1}</li>
-                        <li>{t.footer.service2}</li>
-                        <li>{t.footer.service3}</li>
-                        <li>{t.footer.service4}</li>
+                        <li><a href="/via_pro/projects" className="hover:text-white transition-colors">{t.footer.service1}</a></li>
+                        <li><a href="/via_pro/projects" className="hover:text-white transition-colors">{t.footer.service2}</a></li>
+                        <li><a href="/via_pro/projects" className="hover:text-white transition-colors">{t.footer.service3}</a></li>
+                        <li><a href="/via_pro/projects" className="hover:text-white transition-colors">{t.footer.service4}</a></li>
                     </ul>
                 </div>
 
