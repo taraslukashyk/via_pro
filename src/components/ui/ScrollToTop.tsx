@@ -34,7 +34,7 @@ export const ScrollToTop: React.FC = () => {
                     whileHover={{ scale: 1.1 }}
                     exit={{ opacity: 0, y: 20 }}
                     onClick={scrollToTop}
-                    className="fixed bottom-24 right-10 z-[60] p-4 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 text-[#184c71] shadow-[0_8px_32px_rgba(0,0,0,0.1)] transition-all duration-300 group overflow-hidden"
+                    className="fixed bottom-6 right-9 z-[60] w-14 h-14 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 text-[#184c71] shadow-[0_8px_32px_rgba(0,0,0,0.1)] transition-all duration-300 group overflow-hidden flex items-center justify-center"
                     aria-label="Вгору"
                 >
                     {/* Glass Refraction Highlight */}

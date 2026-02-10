@@ -1,10 +1,11 @@
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { COMPANY_INFO } from '../data/companyInfo';
 import { PROJECTS } from '../data/projects';
 import { Button } from '../components/ui/Button';
+import { TransformingConsultationButton } from '../components/ui/TransformingConsultationButton';
 import { Section } from '../components/ui/Section';
 import { MapSection } from '../components/ui/Map/MapSection';
 import { StatsCounter } from '../components/ui/StatsCounter';
@@ -21,6 +22,7 @@ const Home: React.FC = () => {
     const t = useTranslation();
     const { language } = useLanguage();
     const targetRef = useRef<HTMLDivElement>(null);
+    const isHeroInView = useInView(targetRef, { margin: "-100px" });
     const { scrollYProgress } = useScroll({
         target: targetRef,
         offset: ["start start", "end start"]
@@ -54,19 +56,12 @@ const Home: React.FC = () => {
                     >
                         {t.hero.tagline}
                     </motion.p>
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.6 }}
-                    >
-                        <Button
-                            className="mt-8 text-lg px-8 py-4 bg-accent hover:bg-accent/90"
-                            onClick={() => document.getElementById('contacts')?.scrollIntoView({ behavior: 'smooth' })}
-                        >
-                            {t.hero.cta}
-                        </Button>
-                    </motion.div>
                 </motion.div>
+
+                {/* Button placed outside the scaled/fading container to prevent fixed positioning issues */}
+                <div className="z-20 mt-8 h-24 w-full flex items-center justify-center">
+                    <TransformingConsultationButton isHeroVisible={isHeroInView} />
+                </div>
 
                 {/* Abstract Background Element */}
                 <div className="absolute inset-0 -z-10 opacity-10">
@@ -238,7 +233,7 @@ const Home: React.FC = () => {
                 </FadeIn>
             </Section>
 
-        </main>
+        </main >
     );
 };
 
