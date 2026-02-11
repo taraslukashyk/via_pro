@@ -7,7 +7,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Кільцева розв\'язка (м. Вишневе)',
             description: 'Влаштування транспортної розв\'язки кільцевого типу на перехресті вул. Лесі Українки та вул. Паркова.',
             location: 'м. Вишневе, Київська обл.',
-            backgroundImage: '/via_pro/assets/images/visneve-ring.png'
+            backgroundImage: '/assets/images/visneve-ring.png'
         },
         {
             id: 2,
@@ -15,7 +15,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Тротуари та паркування (м. Вишневе)',
             description: 'Капітальний ремонт тротуару по вул. Київська з влаштуванням заїзних кишень для громадського транспорту та автостоянок.',
             location: 'м. Вишневе, Київська обл.',
-            backgroundImage: '/via_pro/assets/images/visneve-walk.png'
+            backgroundImage: '/assets/images/visneve-walk.png'
         },
         {
             id: 3,
@@ -56,7 +56,7 @@ export const PROJECTS_IMMERSIVE = {
             description: 'Капітальний ремонт мосту та підходів до нього по вул. Ринковій.',
             location: 'м. Бердичів, Житомирська обл.',
             backgroundImage: 'https://images.unsplash.com/photo-1545893835-abaa50cbe628?q=80&w=2070&auto=format&fit=crop'
-        }
+        },
     ],
     en: [
         {
@@ -65,7 +65,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Roundabout (Vyshneve)',
             description: 'Construction of a circular-type traffic interchange at the intersection of Lesia Ukrainka St. and Parkova St.',
             location: 'Vyshneve, Kyiv region',
-            backgroundImage: '/via_pro/assets/images/visneve-ring.png'
+            backgroundImage: '/assets/images/visneve-ring.png'
         },
         {
             id: 2,
@@ -73,7 +73,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Sidewalks and Parking (Vyshneve)',
             description: 'Major repair of the sidewalk on Kyivska St. with the construction of bus bays and parking lots.',
             location: 'Vyshneve, Kyiv region',
-            backgroundImage: '/via_pro/assets/images/visneve-walk.png'
+            backgroundImage: '/assets/images/visneve-walk.png'
         },
         {
             id: 3,

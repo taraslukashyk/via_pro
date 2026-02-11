@@ -8,7 +8,7 @@ export const PROJECTS = {
             budget: 'Реалізовано',
             category: 'Дорожня інфраструктура',
             description: 'Влаштування транспортної розв\'язки кільцевого типу на перехресті вул. Лесі Українки та вул. Паркова. Проєкт забезпечив підвищення безпеки руху та пропускної здатності перехрестя.',
-            image: '/via_pro/assets/images/visneve-ring.png',
+            image: '/assets/images/visneve-ring.png',
             lat: 50.3865,
             lng: 30.3600
         },
@@ -20,7 +20,7 @@ export const PROJECTS = {
             budget: 'В роботі',
             category: 'Міський благоустрій',
             description: 'Капітальний ремонт тротуару по вул. Київська з влаштуванням заїзних кишень для громадського транспорту та автостоянок. Створено інклюзивний та комфортний простір для пішоходів.',
-            image: '/via_pro/assets/images/visneve-walk.png',
+            image: '/assets/images/visneve-walk.png',
             lat: 50.3920,
             lng: 30.3750
         },
@@ -94,7 +94,7 @@ export const PROJECTS = {
             budget: 'Completed',
             category: 'Road Infrastructure',
             description: 'Construction of a circular-type traffic interchange at the intersection of Lesia Ukrainka St. and Parkova St. The project improved traffic safety and intersection capacity.',
-            image: '/via_pro/assets/images/visneve-ring.png',
+            image: '/assets/images/visneve-ring.png',
             lat: 50.3865,
             lng: 30.3600
         },
@@ -106,7 +106,7 @@ export const PROJECTS = {
             budget: 'In Progress',
             category: 'Urban Improvement',
             description: 'Major repair of the sidewalk on Kyivska St. with the construction of bus bays and parking lots. Created an inclusive and comfortable space for pedestrians.',
-            image: '/via_pro/assets/images/visneve-walk.png',
+            image: '/assets/images/visneve-walk.png',
             lat: 50.3920,
             lng: 30.3750
         },
