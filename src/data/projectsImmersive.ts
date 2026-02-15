@@ -23,7 +23,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Реконструкція електропостачання',
             description: 'Реконструкція системи електропостачання котельні з влаштуванням точки підключення когенераційної установки в м. Ватутіне.',
             location: 'м. Ватутіне, Черкаська обл.',
-            backgroundImage: '/assets/images/vatutine-electro.jpg'
+            backgroundImage: '/assets/images/vatutine-electro-new.jpeg'
         },
         {
             id: 3,
@@ -124,6 +124,14 @@ export const PROJECTS_IMMERSIVE = {
             backgroundImage: '/assets/images/visneve-walk.png'
         },
         {
+            id: 9,
+            category: 'Energy Infrastructure',
+            title: 'Power Supply Reconstruction',
+            description: 'Reconstruction of the boiler house power supply system with the installation of a cogeneration unit connection point.',
+            location: 'Vatutine, Cherkasy region',
+            backgroundImage: '/assets/images/vatutine-electro-new.jpeg'
+        },
+        {
             id: 3,
             category: 'Traffic Organization',
             title: 'Community Traffic Scheme (Bila Tserkva)',
@@ -171,14 +179,7 @@ export const PROJECTS_IMMERSIVE = {
             location: 'Yurkivka, Cherkasy region',
             backgroundImage: 'https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?q=80&w=2070&auto=format&fit=crop'
         },
-        {
-            id: 9,
-            category: 'Energy Infrastructure',
-            title: 'Power Supply Reconstruction',
-            description: 'Reconstruction of the boiler house power supply system with the installation of a cogeneration unit connection point.',
-            location: 'Vatutine, Cherkasy region',
-            backgroundImage: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070&auto=format&fit=crop'
-        },
+
         {
             id: 10,
             category: 'Building Renovation / Roofing',

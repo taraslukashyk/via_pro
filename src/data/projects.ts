@@ -32,7 +32,7 @@ export const PROJECTS = {
             budget: 'В роботі',
             category: 'Енергетика',
             description: 'Реконструкція системи електропостачання котельні з влаштуванням точки підключення когенераційної установки. Підвищено надійність енергозабезпечення критичної інфраструктури.',
-            image: '/assets/images/vatutine-electro.jpg',
+            image: '/assets/images/vatutine-electro-new.jpeg',
             lat: 49.0167,
             lng: 31.0667
         },
@@ -190,7 +190,7 @@ export const PROJECTS = {
             budget: 'In Progress',
             category: 'Energy Infrastructure',
             description: 'Reconstruction of the boiler house power supply system with the installation of a cogeneration unit connection point. Improved reliability of critical infrastructure power supply.',
-            image: '/assets/images/vatutine-electro.jpg',
+            image: '/assets/images/vatutine-electro-new.jpeg',
             lat: 49.0167,
             lng: 31.0667
         },
