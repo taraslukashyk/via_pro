@@ -12,9 +12,10 @@ interface ImmersiveProjectCardProps {
         backgroundImage: string;
     };
     index: number;
+    totalProjects: number;
 }
 
-export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ project, index }) => {
+export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ project, index, totalProjects }) => {
     const isEven = index % 2 === 0;
 
     return (
@@ -22,6 +23,8 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
             className="immersive-section relative w-full h-screen flex items-center overflow-hidden"
             style={{ scrollSnapAlign: 'start' }}
         >
+            {/* ... (rest of the code unchanged until the counter) ... */}
+
             {/* Background Image with Scale Animation */}
             <motion.div
                 className="absolute inset-0 z-0"
@@ -127,7 +130,7 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
                 <span className="text-white/40 text-sm font-medium">
                     <span className="text-white text-2xl font-bold">{String(index + 1).padStart(2, '0')}</span>
                     <span className="mx-2">/</span>
-                    <span>07</span>
+                    <span>{String(totalProjects).padStart(2, '0')}</span>
                 </span>
             </div>
         </section>

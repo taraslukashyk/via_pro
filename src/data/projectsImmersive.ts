@@ -18,6 +18,14 @@ export const PROJECTS_IMMERSIVE = {
             backgroundImage: '/assets/images/visneve-walk.png'
         },
         {
+            id: 9,
+            category: 'Енергетична інфраструктура',
+            title: 'Реконструкція електропостачання',
+            description: 'Реконструкція системи електропостачання котельні з влаштуванням точки підключення когенераційної установки в м. Ватутіне.',
+            location: 'м. Ватутіне, Черкаська обл.',
+            backgroundImage: '/assets/images/vatutine-electro.jpg'
+        },
+        {
             id: 3,
             category: 'Організація дорожнього руху (ОДР)',
             title: 'Схема ОДР громади (м. Біла Церква)',
@@ -56,6 +64,46 @@ export const PROJECTS_IMMERSIVE = {
             description: 'Капітальний ремонт мосту та підходів до нього по вул. Ринковій.',
             location: 'м. Бердичів, Житомирська обл.',
             backgroundImage: 'https://images.unsplash.com/photo-1545893835-abaa50cbe628?q=80&w=2070&auto=format&fit=crop'
+        },
+        {
+            id: 8,
+            category: 'Інженерні мережі / Теплопостачання',
+            title: 'Капітальний ремонт системи опалення (БМК-500)',
+            description: 'Влаштування блочно-модульної котельні типу БМК-500 в Юрківській гімназії. Забезпечено енергоефективне опалення навчального закладу.',
+            location: 'с. Юрківка, Черкаська обл.',
+            backgroundImage: 'https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?q=80&w=2070&auto=format&fit=crop'
+        },
+        {
+            id: 10,
+            category: 'Капітальний ремонт будівель',
+            title: 'Ремонт покрівлі (Київський коледж)',
+            description: 'Капітальний ремонт покрівлі в учбово-виробничих майстернях Київського професійного коледжу залізничного транспорту.',
+            location: 'м. Київ (вул. Архітектора Кобелєва)',
+            backgroundImage: 'https://images.unsplash.com/photo-1629813134638-72122b513361?q=80&w=2070&auto=format&fit=crop'
+        },
+        {
+            id: 11,
+            category: 'Консалтинг / Укриття',
+            title: 'Консультаційні послуги (Укриття ЗДО)',
+            description: 'Послуги Інженера-консультанта на об\'єктах капітального ремонту найпростіших укриттів у закладах дошкільної освіти (ЗДО №24, №41, №32).',
+            location: 'м. Київ, Голосіївський район',
+            backgroundImage: 'https://images.unsplash.com/photo-1590579491624-f98f36d4c763?q=80&w=2000&auto=format&fit=crop'
+        },
+        {
+            id: 12,
+            category: 'Технічний нагляд',
+            title: 'Технічний нагляд за дорогами',
+            description: 'Технічний нагляд за будівництвом та ремонтом доріг у м. Обухів, Українка, Ржищів, Ватутіне та селах регіонів.',
+            location: 'Київська та Черкаська області',
+            backgroundImage: 'https://images.unsplash.com/photo-1592861956120-e524fc739696?q=80&w=2070&auto=format&fit=crop'
+        },
+        {
+            id: 13,
+            category: 'Цивільний захист',
+            title: 'Капітальний ремонт укриття (ЗДО №305)',
+            description: 'Технічний нагляд за капітальним ремонтом захисної споруди цивільного захисту в закладі дошкільної освіти №305.',
+            location: 'м. Київ (вул. Ліснича)',
+            backgroundImage: 'https://images.unsplash.com/photo-1517088927909-5a109a976a47?q=80&w=2070&auto=format&fit=crop'
         },
     ],
     en: [
@@ -114,6 +162,54 @@ export const PROJECTS_IMMERSIVE = {
             description: 'Major repair of the bridge and approaches to it on Rynkova St.',
             location: 'Berdychiv, Zhytomyr region',
             backgroundImage: 'https://images.unsplash.com/photo-1545893835-abaa50cbe628?q=80&w=2070&auto=format&fit=crop'
+        },
+        {
+            id: 8,
+            category: 'Engineering Networks / Heating',
+            title: 'Heating System Overhaul (BMK-500)',
+            description: 'Installation of a block-modular boiler house type BMK-500 in Yurkivka Gymnasium. Provided energy-efficient heating for the educational institution.',
+            location: 'Yurkivka, Cherkasy region',
+            backgroundImage: 'https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?q=80&w=2070&auto=format&fit=crop'
+        },
+        {
+            id: 9,
+            category: 'Energy Infrastructure',
+            title: 'Power Supply Reconstruction',
+            description: 'Reconstruction of the boiler house power supply system with the installation of a cogeneration unit connection point.',
+            location: 'Vatutine, Cherkasy region',
+            backgroundImage: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070&auto=format&fit=crop'
+        },
+        {
+            id: 10,
+            category: 'Building Renovation / Roofing',
+            title: 'Roof Repair (Kyiv College)',
+            description: 'Major roof repair in the training workshops of the Kyiv Professional College of Railway Transport.',
+            location: 'Kyiv (Kobelev St.)',
+            backgroundImage: 'https://images.unsplash.com/photo-1629813134638-72122b513361?q=80&w=2070&auto=format&fit=crop'
+        },
+        {
+            id: 11,
+            category: 'Consulting / Shelters',
+            title: 'Consulting Services (Shelters)',
+            description: 'Consulting Engineer services at major repair sites of simple shelters in preschool education institutions (Kindergartens No. 24, 41, 32).',
+            location: 'Kyiv, Holosiivskyi district',
+            backgroundImage: 'https://images.unsplash.com/photo-1590579491624-f98f36d4c763?q=80&w=2000&auto=format&fit=crop'
+        },
+        {
+            id: 12,
+            category: 'Technical Supervision',
+            title: 'Road Construction Supervision',
+            description: 'Technical supervision of road construction and repair in Obukhiv, Ukrainka, Rzhyshchiv, Vatutine and regional villages.',
+            location: 'Kyiv and Cherkasy regions',
+            backgroundImage: 'https://images.unsplash.com/photo-1592861956120-e524fc739696?q=80&w=2070&auto=format&fit=crop'
+        },
+        {
+            id: 13,
+            category: 'Civil Protection',
+            title: 'Shelter Renovation (Kindergarten No. 305)',
+            description: 'Technical supervision of the major repair of a civil protection structure in Preschool Education Institution No. 305.',
+            location: 'Kyiv (Lisnycha St.)',
+            backgroundImage: 'https://images.unsplash.com/photo-1517088927909-5a109a976a47?q=80&w=2070&auto=format&fit=crop'
         }
     ]
 };

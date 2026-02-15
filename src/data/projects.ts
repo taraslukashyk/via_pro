@@ -25,6 +25,18 @@ export const PROJECTS = {
             lng: 30.3750
         },
         {
+            id: 9,
+            title: 'Реконструкція електропостачання',
+            location: 'м. Ватутіне, Черкаська обл.',
+            year: '2025',
+            budget: 'В роботі',
+            category: 'Енергетика',
+            description: 'Реконструкція системи електропостачання котельні з влаштуванням точки підключення когенераційної установки. Підвищено надійність енергозабезпечення критичної інфраструктури.',
+            image: '/assets/images/vatutine-electro.jpg',
+            lat: 49.0167,
+            lng: 31.0667
+        },
+        {
             id: 3,
             title: 'Схема ОДР громади (м. Біла Церква)',
             location: 'м. Біла Церква, Київська обл.',
@@ -83,6 +95,66 @@ export const PROJECTS = {
             image: 'https://images.unsplash.com/photo-1545893835-abaa50cbe628?q=80&w=2070&auto=format&fit=crop',
             lat: 49.8919,
             lng: 28.5866
+        },
+        {
+            id: 8,
+            title: 'Капітальний ремонт системи опалення (БМК-500)',
+            location: 'с. Юрківка, Черкаська обл.',
+            year: '2025',
+            budget: 'В роботі',
+            category: 'Інженерні мережі',
+            description: 'Влаштування блочно-модульної котельні типу БМК-500 в Юрківській гімназії. Забезпечено енергоефективне опалення навчального закладу.',
+            image: 'https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?q=80&w=2070&auto=format&fit=crop', // Placeholder: boiler room/pipes
+            lat: 49.0069,
+            lng: 31.0856
+        },
+        {
+            id: 10,
+            title: 'Ремонт покрівлі (Київський коледж)',
+            location: 'м. Київ (вул. Архітектора Кобелєва)',
+            year: '2025',
+            budget: 'В роботі',
+            category: 'Капітальний ремонт будівель',
+            description: 'Капітальний ремонт покрівлі в учбово-виробничих майстернях Київського професійного коледжу залізничного транспорту. Забезпечено захист будівлі та комфортні умови для навчання.',
+            image: 'https://images.unsplash.com/photo-1629813134638-72122b513361?q=80&w=2070&auto=format&fit=crop', // Placeholder: roof repair/construction
+            lat: 50.4386,
+            lng: 30.4872
+        },
+        {
+            id: 11,
+            title: 'Консультаційні послуги (Укриття ЗДО)',
+            location: 'м. Київ, Голосіївський район',
+            year: '2025',
+            budget: 'В роботі',
+            category: 'Консалтинг / Укриття',
+            description: 'Послуги Інженера-консультанта на об\'єктах капітального ремонту найпростіших укриттів у закладах дошкільної освіти (ЗДО №24, №41, №32). Контроль якості та відповідності нормам безпеки.',
+            image: 'https://images.unsplash.com/photo-1590579491624-f98f36d4c763?q=80&w=2000&auto=format&fit=crop', // Placeholder: shelter/basement
+            lat: 50.4000,
+            lng: 30.5100
+        },
+        {
+            id: 12,
+            title: 'Технічний нагляд за дорогами',
+            location: 'Київська та Черкаська області',
+            year: '2025',
+            budget: 'В роботі',
+            category: 'Технічний нагляд',
+            description: 'Технічний нагляд за будівництвом та ремонтом доріг у м. Обухів, Українка, Ржищів, Ватутіне та селах регіонів. Контроль якості виконання робіт та дотримання технологічних процесів.',
+            image: 'https://images.unsplash.com/photo-1592861956120-e524fc739696?q=80&w=2070&auto=format&fit=crop', // Placeholder: road construction inspection
+            lat: 50.1136,
+            lng: 30.6225
+        },
+        {
+            id: 13,
+            title: 'Капітальний ремонт укриття (ЗДО №305)',
+            location: 'м. Київ (вул. Ліснича)',
+            year: '2025',
+            budget: 'В роботі',
+            category: 'Цивільний захист',
+            description: 'Технічний нагляд за капітальним ремонтом захисної споруди цивільного захисту в закладі дошкільної освіти №305. Створення безпечного середовища для дітей.',
+            image: 'https://images.unsplash.com/photo-1517088927909-5a109a976a47?q=80&w=2070&auto=format&fit=crop', // Placeholder: renovation indoors
+            lat: 50.4200,
+            lng: 30.6800
         }
     ],
     en: [
@@ -109,6 +181,18 @@ export const PROJECTS = {
             image: '/assets/images/visneve-walk.png',
             lat: 50.3920,
             lng: 30.3750
+        },
+        {
+            id: 9,
+            title: 'Power Supply Reconstruction',
+            location: 'Vatutine, Cherkasy region',
+            year: '2025',
+            budget: 'In Progress',
+            category: 'Energy Infrastructure',
+            description: 'Reconstruction of the boiler house power supply system with the installation of a cogeneration unit connection point. Improved reliability of critical infrastructure power supply.',
+            image: '/assets/images/vatutine-electro.jpg',
+            lat: 49.0167,
+            lng: 31.0667
         },
         {
             id: 3,
@@ -169,6 +253,66 @@ export const PROJECTS = {
             image: 'https://images.unsplash.com/photo-1545893835-abaa50cbe628?q=80&w=2070&auto=format&fit=crop',
             lat: 49.8919,
             lng: 28.5866
+        },
+        {
+            id: 8,
+            title: 'Heating System Overhaul (BMK-500)',
+            location: 'Yurkivka, Cherkasy region',
+            year: '2025',
+            budget: 'In Progress',
+            category: 'Engineering Networks',
+            description: 'Installation of a block-modular boiler house type BMK-500 in Yurkivka Gymnasium. Provided energy-efficient heating for the educational institution.',
+            image: 'https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?q=80&w=2070&auto=format&fit=crop',
+            lat: 49.0069,
+            lng: 31.0856
+        },
+        {
+            id: 10,
+            title: 'Roof Repair (Kyiv College)',
+            location: 'Kyiv (Kobelev St.)',
+            year: '2025',
+            budget: 'In Progress',
+            category: 'Building Renovation',
+            description: 'Major roof repair in the training workshops of the Kyiv Professional College of Railway Transport. Provided building protection and comfortable conditions for learning.',
+            image: 'https://images.unsplash.com/photo-1629813134638-72122b513361?q=80&w=2070&auto=format&fit=crop',
+            lat: 50.4386,
+            lng: 30.4872
+        },
+        {
+            id: 11,
+            title: 'Consulting Services (Shelters)',
+            location: 'Kyiv, Holosiivskyi district',
+            year: '2025',
+            budget: 'In Progress',
+            category: 'Consulting / Shelters',
+            description: 'Consulting Engineer services at major repair sites of simple shelters in preschool education institutions (Kindergartens No. 24, 41, 32). Quality control and compliance with safety standards.',
+            image: 'https://images.unsplash.com/photo-1590579491624-f98f36d4c763?q=80&w=2000&auto=format&fit=crop',
+            lat: 50.4000,
+            lng: 30.5100
+        },
+        {
+            id: 12,
+            title: 'Road Construction Supervision',
+            location: 'Kyiv and Cherkasy regions',
+            year: '2025',
+            budget: 'In Progress',
+            category: 'Technical Supervision',
+            description: 'Technical supervision of road construction and repair in Obukhiv, Ukrainka, Rzhyshchiv, Vatutine and regional villages. Quality control of work execution and adherence to technological processes.',
+            image: 'https://images.unsplash.com/photo-1592861956120-e524fc739696?q=80&w=2070&auto=format&fit=crop',
+            lat: 50.1136,
+            lng: 30.6225
+        },
+        {
+            id: 13,
+            title: 'Shelter Renovation (Kindergarten No. 305)',
+            location: 'Kyiv (Lisnycha St.)',
+            year: '2025',
+            budget: 'In Progress',
+            category: 'Civil Protection',
+            description: 'Technical supervision of the major repair of a civil protection structure in Preschool Education Institution No. 305. Creating a safe environment for children.',
+            image: 'https://images.unsplash.com/photo-1517088927909-5a109a976a47?q=80&w=2070&auto=format&fit=crop',
+            lat: 50.4200,
+            lng: 30.6800
         }
     ]
 };

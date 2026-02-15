@@ -128,11 +128,11 @@ const Projects: React.FC = () => {
                         transition={{ duration: 0.8, delay: 0.6 }}
                     >
                         <div className="text-center">
-                            <div className="text-4xl md:text-5xl font-bold text-white mb-2">7</div>
+                            <div className="text-4xl md:text-5xl font-bold text-white mb-2">{PROJECTS_IMMERSIVE[language].length}</div>
                             <div className="text-white/50 text-sm uppercase tracking-wider">{t.projectsPage.stats.projects}</div>
                         </div>
                         <div className="text-center">
-                            <div className="text-4xl md:text-5xl font-bold text-white mb-2">3</div>
+                            <div className="text-4xl md:text-5xl font-bold text-white mb-2">5</div>
                             <div className="text-white/50 text-sm uppercase tracking-wider">{t.projectsPage.stats.regions}</div>
                         </div>
                         <div className="text-center">
@@ -169,6 +169,7 @@ const Projects: React.FC = () => {
                     key={project.id}
                     project={project}
                     index={index}
+                    totalProjects={PROJECTS_IMMERSIVE[language].length}
                 />
             ))}
 
