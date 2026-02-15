@@ -46,6 +46,17 @@ export const COMPANY_INFO = {
                     'Складання детальних кошторисів витрат на будівництво.'
                 ]
             },
+            {
+                id: 'tender',
+                title: 'Тендерний супровід',
+                intro: 'Тендерний супровід здійснення публічних закупівель як учасника так і замовника.',
+                details: [
+                    'Підготовка та супровід тендерної документації для учасників.',
+                    'Консультації замовників щодо організації публічних закупівель.',
+                    'Оскарження та захист учасників тендеру.',
+                    'Юридичний супровід на всіх етапах тендерного процесу.'
+                ]
+            },
         ],
         en: [
             {
@@ -78,6 +89,17 @@ export const COMPANY_INFO = {
                     'Obtaining technical conditions and project approvals from relevant authorities.',
                     'Calculation of road pavement structures.',
                     'Preparation of detailed construction cost estimates.'
+                ]
+            },
+            {
+                id: 'tender',
+                title: 'Tender Support',
+                intro: 'Tender support for public procurement implementation as both participant and customer.',
+                details: [
+                    'Preparation and support of tender documentation for participants.',
+                    'Consulting for customers on public procurement organization.',
+                    'Appeals and protection of tender participants.',
+                    'Legal support at all stages of the tender process.'
                 ]
             },
         ]
