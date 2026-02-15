@@ -25,7 +25,7 @@ export const en: TranslationKeys = {
     // Stats Section
     stats: {
         yearsLabel: 'Years in Business',
-        projectsLabel: 'Completed Projects',
+        projectsLabel: 'Government Contracts',
         growthLabel: 'Annual Growth',
     },
 

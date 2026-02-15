@@ -23,7 +23,7 @@ export const uk = {
     // Stats Section
     stats: {
         yearsLabel: 'Років на ринку',
-        projectsLabel: 'Реалізованих проєктів',
+        projectsLabel: 'Державних замовлень',
         growthLabel: 'Щорічне зростання',
     },
 

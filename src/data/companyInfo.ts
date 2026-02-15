@@ -9,7 +9,7 @@ export const COMPANY_INFO = {
     edrpou: '44085020',
     stats: {
         years: 5,
-        projects: 80, // Оновлено до 80 + за запитом користувача
+        projects: 210, // Оновлено до 80 + за запитом користувача
         growth: '30%', // Year over year
     },
     services: {

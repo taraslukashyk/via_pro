@@ -84,11 +84,11 @@ const Home: React.FC = () => {
 
                 <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center relative z-10 items-center justify-center">
                     <motion.div variants={{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }}>
-                        <StatsCounter value={5} suffix="+" label={t.stats.yearsLabel} />
+                        <StatsCounter value={COMPANY_INFO.stats.years} suffix="+" label={t.stats.yearsLabel} />
                     </motion.div>
 
                     <motion.div variants={{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }}>
-                        <StatsCounter value={80} suffix="+" label={t.stats.projectsLabel} />
+                        <StatsCounter value={COMPANY_INFO.stats.projects} suffix="+" label={t.stats.projectsLabel} />
                     </motion.div>
 
                     <motion.div variants={{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }}>
