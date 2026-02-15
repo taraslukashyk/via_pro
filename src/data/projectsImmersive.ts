@@ -31,7 +31,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Схема ОДР громади (м. Біла Церква)',
             description: 'Комплексна розробка та погодження схеми організації дорожнього руху на території міської територіальної громади.',
             location: 'м. Біла Церква, Київська обл.',
-            backgroundImage: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=2070&auto=format&fit=crop'
+            backgroundImage: '/assets/images/bila.jpeg'
         },
         {
             id: 4,
@@ -95,7 +95,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Технічний нагляд за дорогами',
             description: 'Технічний нагляд за будівництвом та ремонтом доріг у м. Обухів, Українка, Ржищів, Ватутіне та селах регіонів.',
             location: 'Київська та Черкаська області',
-            backgroundImage: 'https://images.unsplash.com/photo-1592861956120-e524fc739696?q=80&w=2070&auto=format&fit=crop'
+            backgroundImage: '/assets/images/naglad.jpeg'
         },
         {
             id: 13,
@@ -137,7 +137,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Community Traffic Scheme (Bila Tserkva)',
             description: 'Comprehensive development and approval of a traffic organization scheme for the urban territorial community.',
             location: 'Bila Tserkva, Kyiv region',
-            backgroundImage: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=2070&auto=format&fit=crop'
+            backgroundImage: '/assets/images/bila.jpeg'
         },
         {
             id: 4,
@@ -202,7 +202,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Road Construction Supervision',
             description: 'Technical supervision of road construction and repair in Obukhiv, Ukrainka, Rzhyshchiv, Vatutine and regional villages.',
             location: 'Kyiv and Cherkasy regions',
-            backgroundImage: 'https://images.unsplash.com/photo-1592861956120-e524fc739696?q=80&w=2070&auto=format&fit=crop'
+            backgroundImage: '/assets/images/naglad.jpeg'
         },
         {
             id: 13,

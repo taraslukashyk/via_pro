@@ -44,7 +44,7 @@ export const PROJECTS = {
             budget: 'Реалізовано',
             category: 'Організація дорожнього руху',
             description: 'Комплексна розробка та погодження схеми організації дорожнього руху на території міської територіальної громади. Впроваджено сучасні рішення для оптимізації транспортних і пішохідних потоків.',
-            image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=2070&auto=format&fit=crop',
+            image: '/assets/images/bila.jpeg',
             lat: 49.7969,
             lng: 30.1144
         },
@@ -140,7 +140,7 @@ export const PROJECTS = {
             budget: 'В роботі',
             category: 'Технічний нагляд',
             description: 'Технічний нагляд за будівництвом та ремонтом доріг у м. Обухів, Українка, Ржищів, Ватутіне та селах регіонів. Контроль якості виконання робіт та дотримання технологічних процесів.',
-            image: 'https://images.unsplash.com/photo-1592861956120-e524fc739696?q=80&w=2070&auto=format&fit=crop', // Placeholder: road construction inspection
+            image: '/assets/images/naglad.jpeg', // Placeholder: road construction inspection
             lat: 50.1136,
             lng: 30.6225
         },
@@ -202,7 +202,7 @@ export const PROJECTS = {
             budget: 'Completed',
             category: 'Traffic Organization',
             description: 'Comprehensive development and approval of a traffic organization scheme for the urban territorial community. Implemented modern solutions to optimize traffic and pedestrian flows.',
-            image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=2070&auto=format&fit=crop',
+            image: '/assets/images/bila.jpeg',
             lat: 49.7969,
             lng: 30.1144
         },
@@ -298,7 +298,7 @@ export const PROJECTS = {
             budget: 'In Progress',
             category: 'Technical Supervision',
             description: 'Technical supervision of road construction and repair in Obukhiv, Ukrainka, Rzhyshchiv, Vatutine and regional villages. Quality control of work execution and adherence to technological processes.',
-            image: 'https://images.unsplash.com/photo-1592861956120-e524fc739696?q=80&w=2070&auto=format&fit=crop',
+            image: '/assets/images/naglad.jpeg',
             lat: 50.1136,
             lng: 30.6225
         },
