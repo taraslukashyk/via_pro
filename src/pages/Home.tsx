@@ -14,6 +14,7 @@ import { ServiceCard } from '../components/ui/ServiceCard';
 import { TelegramIcon, WhatsAppIcon } from '../components/ui/SocialIcons';
 import { Carousel } from '../components/ui/Carousel';
 import { InteractiveHeroBackground } from '../components/ui/InteractiveHeroBackground';
+import { TrustedByMarquee } from '../components/ui/TrustedByMarquee';
 import aboutImage from '../assets/images/VIA_PRO_about.jpg';
 import { useTranslation } from '../translations';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -61,6 +62,11 @@ const Home: React.FC = () => {
                 {/* Button placed outside the scaled/fading container to prevent fixed positioning issues */}
                 <div className="z-20 mt-8 h-24 w-full flex items-center justify-center">
                     <TransformingConsultationButton isHeroVisible={isHeroInView} />
+                </div>
+
+                {/* Trusted By Marquee */}
+                <div className="absolute bottom-0 left-0 right-0 z-10">
+                    <TrustedByMarquee />
                 </div>
 
                 {/* Abstract Background Element */}
