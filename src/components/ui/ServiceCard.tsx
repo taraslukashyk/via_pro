@@ -24,8 +24,8 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, intro, d
                 animate: { opacity: 1, y: 0 }
             }}
             onClick={() => setIsOpen(!isOpen)}
-            className={`p-8 md:p-10 rounded-2xl bg-background border transition-all duration-300 group cursor-pointer overflow-hidden flex flex-col
-                ${isOpen ? 'border-accent shadow-lg h-[650px]' : 'border-foreground/5 hover:shadow-xl hover:border-accent/30 h-[320px]'}
+            className={`p-8 md:p-10 rounded-2xl bg-background border transition-all duration-300 group cursor-pointer flex flex-col
+                ${isOpen ? 'border-accent shadow-lg h-[750px] overflow-y-auto' : 'border-foreground/5 hover:shadow-xl hover:border-accent/30 h-[380px] overflow-hidden'}
             `}
         >
             <motion.div layout="position" className="flex flex-col h-full">
