@@ -17,21 +17,23 @@ const logos = [
     { src: okkoLogo, alt: 'ОККО' },
 ];
 
-export const TrustedByMarquee: React.FC = () => {
+interface TrustedByMarqueeProps {
+    showTitle?: boolean;
+}
+
+export const TrustedByMarquee: React.FC<TrustedByMarqueeProps> = ({ showTitle = true }) => {
     return (
-        <div className="w-full py-8 overflow-hidden bg-background/50 backdrop-blur-sm">
-            <div className="mb-6 text-center">
-                <span className="text-sm font-medium tracking-widest uppercase text-foreground/60">
-                    Нам довіряють
-                </span>
-            </div>
+        <div className="w-full py-8 overflow-hidden bg-white/5 backdrop-blur-md border-y border-white/10">
+            {showTitle && (
+                <div className="mb-6 text-center">
+                    <span className="text-sm font-medium tracking-widest uppercase text-foreground/60">
+                        Нам довіряють
+                    </span>
+                </div>
+            )}
 
             {/* Контейнер для бігучої стрічки */}
             <div className="relative flex overflow-hidden">
-                {/* Градієнти з боків для плавного ефекту */}
-                <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-                <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-
                 {/* Анімована стрічка - дублюємо для безперервної анімації */}
                 <motion.div
                     className="flex gap-16 items-center"

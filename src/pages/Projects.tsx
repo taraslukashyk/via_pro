@@ -5,6 +5,7 @@ import { PROJECTS_IMMERSIVE } from '../data/projectsImmersive';
 import { ImmersiveProjectCard } from '../components/ui/ImmersiveProjectCard';
 import { useTranslation } from '../translations';
 import { useLanguage } from '../contexts/LanguageContext';
+import { TrustedByMarquee } from '../components/ui/TrustedByMarquee';
 
 const Projects: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -173,11 +174,11 @@ const Projects: React.FC = () => {
 
             {/* Final CTA Section */}
             <section
-                className="immersive-section relative w-full h-screen flex items-center justify-center overflow-hidden"
+                className="immersive-section relative w-full h-screen flex flex-col items-center justify-center overflow-hidden"
             >
                 <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0a1628] via-[#0d1f3c] to-[#1a365d]" />
 
-                <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+                <div className="relative z-10 text-center px-6 max-w-4xl mx-auto mb-16">
                     <motion.h2
                         className="text-4xl md:text-6xl font-bold text-white mb-6"
                         initial={{ opacity: 0, y: 30 }}
@@ -197,6 +198,29 @@ const Projects: React.FC = () => {
                     >
                         {t.projectsPage.nextProjectSubheading}
                     </motion.p>
+                </div>
+
+                {/* Trusted Partners Marquee */}
+                <div className="relative z-10 w-full">
+                    <div className="mb-8 text-center">
+                        <motion.h3
+                            className="text-2xl md:text-3xl font-bold text-white"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                            viewport={{ once: false }}
+                        >
+                            Партнери, які довіряють нам свої проєкти
+                        </motion.h3>
+                    </div>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.8, delay: 0.6 }}
+                        viewport={{ once: false }}
+                    >
+                        <TrustedByMarquee showTitle={false} />
+                    </motion.div>
                 </div>
             </section>
 
