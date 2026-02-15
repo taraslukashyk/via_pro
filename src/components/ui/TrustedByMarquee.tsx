@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from '../../translations';
 import atbLogo from '../../assets/logos/atb.svg';
 import fozzyLogo from '../../assets/logos/fozzy.svg';
 import mcdonaldsLogo from '../../assets/logos/mcdonalds.svg';
@@ -22,12 +23,14 @@ interface TrustedByMarqueeProps {
 }
 
 export const TrustedByMarquee: React.FC<TrustedByMarqueeProps> = ({ showTitle = true }) => {
+    const t = useTranslation();
+
     return (
         <div className="w-full py-8 overflow-hidden bg-white/5 backdrop-blur-md border-y border-white/10">
             {showTitle && (
                 <div className="mb-6 text-center">
                     <span className="text-sm font-medium tracking-widest uppercase text-foreground/60">
-                        Нам довіряють
+                        {t.trustedBy.title}
                     </span>
                 </div>
             )}

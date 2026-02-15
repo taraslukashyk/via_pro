@@ -123,6 +123,12 @@ export const en: TranslationKeys = {
         description: 'We implement projects throughout Ukraine, providing quality supervision and design.',
     },
 
+    // Trusted By Section
+    trustedBy: {
+        title: 'Trusted by',
+        partnersTitle: 'Partners who trust us with their projects',
+    },
+
     // Common
     common: {
         contact: 'Contact',

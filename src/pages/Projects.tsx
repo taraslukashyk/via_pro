@@ -210,7 +210,7 @@ const Projects: React.FC = () => {
                             transition={{ duration: 0.6, delay: 0.4 }}
                             viewport={{ once: false }}
                         >
-                            Партнери, які довіряють нам свої проєкти
+                            {t.trustedBy.partnersTitle}
                         </motion.h3>
                     </div>
                     <motion.div

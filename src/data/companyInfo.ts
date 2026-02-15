@@ -71,7 +71,7 @@ export const COMPANY_INFO = {
             },
             {
                 id: 'consulting',
-                title: 'Engineering\nConsulting',
+                title: 'Consultant Engineer Services',
                 intro: 'Expert support, obtaining technical conditions and calculating construction costs.',
                 details: [
                     'Development and analysis of pre-project solutions.',

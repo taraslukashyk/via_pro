@@ -121,6 +121,12 @@ export const uk = {
         description: 'Ми реалізуємо проєкти по всій території України, забезпечуючи якісний нагляд та проєктування.',
     },
 
+    // Trusted By Section
+    trustedBy: {
+        title: 'Нам довіряють',
+        partnersTitle: 'Партнери, які довіряють нам свої проєкти',
+    },
+
     // Common
     common: {
         contact: 'Зв\'язатись',
