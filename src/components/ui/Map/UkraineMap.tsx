@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import { UKRAINE_REGIONS } from '../../../data/mapPaths';
 import { getRegionStats, getStatsRange, type RegionStats } from '../../../data/regionStats';
 import { RegionTooltip } from './RegionTooltip';
@@ -6,6 +6,7 @@ import { RegionTooltip } from './RegionTooltip';
 export const UkraineMap: React.FC = () => {
     const [hoveredRegion, setHoveredRegion] = useState<RegionStats | null>(null);
     const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+    const containerRef = useRef<HTMLDivElement>(null);
 
     // Отримуємо діапазон значень для градієнту
     const { min, max } = getStatsRange();
@@ -29,13 +30,11 @@ export const UkraineMap: React.FC = () => {
         return `rgba(24, 76, 113, ${opacity.toFixed(2)})`;
     }, [min, max]);
 
-    // Обробник наведення на область
+    // Обробник наведення на область (десктоп)
     const handleMouseEnter = useCallback((e: React.MouseEvent<SVGPathElement>, regionId: number) => {
         const stats = getRegionStats(regionId);
         if (stats) {
             setHoveredRegion(stats);
-
-            // Отримуємо координати відносно SVG елемента
             const svgRect = e.currentTarget.ownerSVGElement?.getBoundingClientRect();
             if (svgRect) {
                 setTooltipPosition({
@@ -62,8 +61,28 @@ export const UkraineMap: React.FC = () => {
         setHoveredRegion(null);
     }, []);
 
+    // Обробник кліку/тачу для мобільних — toggle tooltip
+    const handleClick = useCallback((e: React.MouseEvent<SVGPathElement>, regionId: number) => {
+        const stats = getRegionStats(regionId);
+        if (!stats) return;
+
+        // Якщо натиснуто на ту ж область — приховати tooltip
+        if (hoveredRegion?.id === regionId) {
+            setHoveredRegion(null);
+        } else {
+            setHoveredRegion(stats);
+            const svgRect = e.currentTarget.ownerSVGElement?.getBoundingClientRect();
+            if (svgRect) {
+                setTooltipPosition({
+                    x: e.clientX - svgRect.left,
+                    y: e.clientY - svgRect.top,
+                });
+            }
+        }
+    }, [hoveredRegion]);
+
     return (
-        <div className="w-full h-full relative">
+        <div className="w-full h-full relative" ref={containerRef}>
             <svg
                 viewBox="0 0 800 520"
                 className="w-full h-full drop-shadow-sm"
@@ -89,6 +108,7 @@ export const UkraineMap: React.FC = () => {
                             onMouseEnter={(e) => handleMouseEnter(e, region.id)}
                             onMouseMove={handleMouseMove}
                             onMouseLeave={handleMouseLeave}
+                            onClick={(e) => handleClick(e, region.id)}
                         />
                     );
                 })}
@@ -101,6 +121,7 @@ export const UkraineMap: React.FC = () => {
                     x={tooltipPosition.x}
                     y={tooltipPosition.y}
                     visible={!!hoveredRegion}
+                    containerRef={containerRef}
                 />
             )}
         </div>
