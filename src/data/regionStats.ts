@@ -78,10 +78,10 @@ export const REGION_STATISTICS: RegionStats[] = [
     name: 'Хмельницька',
     id: 3145, // Хмельницька область
     technicalSupervision: 0,
-    design: 1,
+    design: 2,
     repair: 0,
     other: 0,
-    total: 1,
+    total: 2,
   },
 ];
 
