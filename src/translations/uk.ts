@@ -118,7 +118,12 @@ export const uk = {
     geography: {
         heading: 'Географія',
         subheading: 'Масштаб діяльності',
-        description: 'Ми реалізуємо проєкти по всій території України, забезпечуючи якісний нагляд та проєктування.',
+        description: 'Температурна карта відображає інтенсивність нашої діяльності в різних регіонах України. Наведіть курсор на область для детальної інформації.',
+        tooltipTotal: 'Всього об\'єктів',
+        tooltipTechnicalSupervision: 'Технагляд',
+        tooltipDesign: 'Проєктування',
+        tooltipRepair: 'Ремонт та інші',
+        tooltipOther: 'Інше',
     },
 
     // Trusted By Section

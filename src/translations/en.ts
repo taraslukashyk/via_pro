@@ -120,7 +120,12 @@ export const en: TranslationKeys = {
     geography: {
         heading: 'Geography',
         subheading: 'Scale of activity',
-        description: 'We implement projects throughout Ukraine, providing quality supervision and design.',
+        description: 'The heat map displays the intensity of our activities across different regions of Ukraine. Hover over a region for detailed information.',
+        tooltipTotal: 'Total objects',
+        tooltipTechnicalSupervision: 'Technical supervision',
+        tooltipDesign: 'Design',
+        tooltipRepair: 'Repair and others',
+        tooltipOther: 'Other',
     },
 
     // Trusted By Section
