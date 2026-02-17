@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { MapPin } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MapPin, X, Maximize } from 'lucide-react';
 
 interface ImmersiveProjectCardProps {
     project: {
@@ -17,6 +17,8 @@ interface ImmersiveProjectCardProps {
 
 export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ project, index, totalProjects }) => {
     const isEven = index % 2 === 0;
+    // Стейт для відкриття зображення у повноекранному режимі (лайтбокс)
+    const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
     return (
         <section
@@ -93,9 +95,9 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
                     </div>
                 </motion.div>
 
-                {/* Основне зображення проєкту — чітке, без блюру */}
+                {/* Основне зображення проєкту — клікабельне для відкриття */}
                 <motion.div
-                    className="flex-1 h-[65vh] max-h-[700px] rounded-2xl overflow-hidden shadow-2xl"
+                    className="relative flex-1 h-[65vh] max-h-[700px] rounded-2xl overflow-hidden shadow-2xl cursor-pointer group/img"
                     initial={{
                         opacity: 0,
                         scale: 0.92,
@@ -112,25 +114,31 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
                         ease: [0.25, 0.46, 0.45, 0.94]
                     }}
                     viewport={{ once: false, amount: 0.3 }}
+                    onClick={() => setIsLightboxOpen(true)}
                 >
                     <img
                         src={project.backgroundImage}
                         alt={project.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105"
                     />
+                    {/* Іконка розгортання внизу справа — тільки ПК */}
+                    <div className="absolute bottom-3 right-3 bg-black/50 backdrop-blur-sm rounded-lg p-2 text-white/70 group-hover/img:text-white transition-colors duration-300 hidden md:block">
+                        <Maximize size={18} />
+                    </div>
                 </motion.div>
             </div>
 
             {/* === MOBILE: Вертикальний лейаут (зображення зверху, компактна картка внизу) === */}
             <div className="relative z-20 w-full h-full flex md:hidden flex-col justify-end">
 
-                {/* Основне зображення — по центру екрану */}
+                {/* Основне зображення — клікабельне */}
                 <motion.div
-                    className="absolute inset-x-4 top-20 bottom-36 rounded-xl overflow-hidden shadow-xl"
+                    className="absolute inset-x-4 top-20 bottom-36 rounded-xl overflow-hidden shadow-xl cursor-pointer"
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.7, ease: 'easeOut' }}
                     viewport={{ once: false, amount: 0.3 }}
+                    onClick={() => setIsLightboxOpen(true)}
                 >
                     <img
                         src={project.backgroundImage}
@@ -198,6 +206,53 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
                     <span>{String(totalProjects).padStart(2, '0')}</span>
                 </span>
             </div>
+
+            {/* === LIGHTBOX: Повноекранний перегляд зображення === */}
+            <AnimatePresence>
+                {isLightboxOpen && (
+                    <motion.div
+                        className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm cursor-zoom-out"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        onClick={() => setIsLightboxOpen(false)}
+                    >
+                        {/* Кнопка закриття */}
+                        <button
+                            className="absolute top-6 right-6 z-[110] text-white/70 hover:text-white transition-colors bg-black/40 hover:bg-black/60 rounded-full p-2"
+                            onClick={() => setIsLightboxOpen(false)}
+                            aria-label="Закрити"
+                        >
+                            <X size={28} />
+                        </button>
+
+                        {/* Зображення */}
+                        <motion.img
+                            src={project.backgroundImage}
+                            alt={project.title}
+                            className="max-w-[95vw] max-h-[90vh] object-contain rounded-lg shadow-2xl"
+                            initial={{ scale: 0.85, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.85, opacity: 0 }}
+                            transition={{ duration: 0.3, ease: 'easeOut' }}
+                            onClick={(e) => e.stopPropagation()}
+                        />
+
+                        {/* Назва проєкту під зображенням */}
+                        <motion.div
+                            className="absolute bottom-8 text-center text-white"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 20 }}
+                            transition={{ delay: 0.15, duration: 0.3 }}
+                        >
+                            <h3 className="text-lg font-semibold">{project.title}</h3>
+                            <p className="text-white/60 text-sm mt-1">{project.location}</p>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 };

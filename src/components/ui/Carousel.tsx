@@ -73,24 +73,42 @@ export const Carousel: React.FC<CarouselProps> = ({ children, className = '' }) 
 
     return (
         <div className={`relative group/carousel ${className}`}>
-            {/* Navigation Arrows */}
+            {/* Стрілки навігації — ПК: круглі кнопки, Мобільний: тонкі смужки по боках */}
+            {/* Ліва кнопка — ПК */}
             <button
                 onClick={() => scroll('left')}
                 disabled={!canScrollLeft}
-                className={`absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-white disabled:opacity-0 rounded-full p-4 shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 group/btn ${!canScrollLeft ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+                className={`absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-white disabled:opacity-0 rounded-full p-4 shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 hidden md:flex items-center justify-center ${!canScrollLeft ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
                 aria-label="Previous slide"
             >
                 <ChevronLeft className="w-6 h-6 text-[#184c71]" />
             </button>
 
+            {/* Права кнопка — ПК */}
             <button
                 onClick={() => scroll('right')}
                 disabled={!canScrollRight}
-                className={`absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-white disabled:opacity-0 rounded-full p-4 shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 group/btn ${!canScrollRight ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+                className={`absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-white disabled:opacity-0 rounded-full p-4 shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 hidden md:flex items-center justify-center ${!canScrollRight ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
                 aria-label="Next slide"
             >
                 <ChevronRight className="w-6 h-6 text-[#184c71]" />
             </button>
+
+            {/* Ліва смужка — мобільний */}
+            <button
+                onClick={() => scroll('left')}
+                disabled={!canScrollLeft}
+                className={`absolute left-0 top-1/2 -translate-y-1/2 z-30 w-2 h-16 rounded-r-full bg-[#184c71]/40 active:bg-[#184c71]/70 transition-all duration-300 md:hidden ${!canScrollLeft ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+                aria-label="Previous slide"
+            />
+
+            {/* Права смужка — мобільний */}
+            <button
+                onClick={() => scroll('right')}
+                disabled={!canScrollRight}
+                className={`absolute right-0 top-1/2 -translate-y-1/2 z-30 w-2 h-16 rounded-l-full bg-[#184c71]/40 active:bg-[#184c71]/70 transition-all duration-300 md:hidden ${!canScrollRight ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+                aria-label="Next slide"
+            />
 
             {/* Carousel Container with Gradient Mask */}
             <div
@@ -125,8 +143,8 @@ export const Carousel: React.FC<CarouselProps> = ({ children, className = '' }) 
                         key={index}
                         onClick={() => scrollTo(index)}
                         className={`h-1.5 rounded-full transition-all duration-300 ${index === activeIndex
-                                ? 'w-8 bg-[#184c71]'
-                                : 'w-1.5 bg-gray-300 hover:bg-gray-400'
+                            ? 'w-8 bg-[#184c71]'
+                            : 'w-1.5 bg-gray-300 hover:bg-gray-400'
                             }`}
                         aria-label={`Go to slide ${index + 1}`}
                     />
