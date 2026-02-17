@@ -7,6 +7,7 @@ import mcdonaldsLogo from '../../assets/logos/mcdonalds.svg';
 import inzhurLogo from '../../assets/logos/inzhur.svg';
 import molodistLogo from '../../assets/logos/molodist.png';
 import okkoLogo from '../../assets/logos/окко.svg';
+import forsageLogo from '../../assets/logos/Logo_forsage.svg';
 
 // Масив логотипів компаній-партнерів
 const logos = [
@@ -16,6 +17,7 @@ const logos = [
     { src: inzhurLogo, alt: 'ІНЖУР' },
     { src: molodistLogo, alt: 'МОЛОДІСТЬ' },
     { src: okkoLogo, alt: 'ОККО' },
+    { src: forsageLogo, alt: 'ФОРСАЖ' },
 ];
 
 interface TrustedByMarqueeProps {
@@ -26,7 +28,7 @@ export const TrustedByMarquee: React.FC<TrustedByMarqueeProps> = ({ showTitle = 
     const t = useTranslation();
 
     return (
-        <div className="w-full py-8 overflow-hidden bg-white/5 backdrop-blur-md border-y border-white/10">
+        <div className="w-full py-4 md:py-8 overflow-hidden bg-white/5 backdrop-blur-md border-y border-white/10">
             {showTitle && (
                 <div className="mb-6 text-center">
                     <span className="text-sm font-medium tracking-widest uppercase text-foreground/60">
@@ -39,7 +41,7 @@ export const TrustedByMarquee: React.FC<TrustedByMarqueeProps> = ({ showTitle = 
             <div className="relative flex overflow-hidden">
                 {/* Анімована стрічка - дублюємо для безперервної анімації */}
                 <motion.div
-                    className="flex gap-16 items-center"
+                    className="flex gap-8 md:gap-16 items-center"
                     animate={{
                         x: [0, -1200], // Рухаємо на ширину одного набору логотипів
                     }}
@@ -56,7 +58,7 @@ export const TrustedByMarquee: React.FC<TrustedByMarqueeProps> = ({ showTitle = 
                     {logos.map((logo, index) => (
                         <div
                             key={`logo-1-${index}`}
-                            className="flex-shrink-0 w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
+                            className="flex-shrink-0 w-28 h-12 md:w-40 md:h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
                         >
                             <img
                                 src={logo.src}
@@ -70,7 +72,7 @@ export const TrustedByMarquee: React.FC<TrustedByMarqueeProps> = ({ showTitle = 
                     {logos.map((logo, index) => (
                         <div
                             key={`logo-2-${index}`}
-                            className="flex-shrink-0 w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
+                            className="flex-shrink-0 w-28 h-12 md:w-40 md:h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
                         >
                             <img
                                 src={logo.src}
@@ -84,7 +86,7 @@ export const TrustedByMarquee: React.FC<TrustedByMarqueeProps> = ({ showTitle = 
                     {logos.map((logo, index) => (
                         <div
                             key={`logo-3-${index}`}
-                            className="flex-shrink-0 w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
+                            className="flex-shrink-0 w-28 h-12 md:w-40 md:h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
                         >
                             <img
                                 src={logo.src}
