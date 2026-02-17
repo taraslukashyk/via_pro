@@ -1,3 +1,5 @@
+import planM01Img from '../assets/images/plan_m01.jpg';
+
 export const PROJECTS = {
     uk: [
         {
@@ -56,13 +58,13 @@ export const PROJECTS = {
             budget: 'В роботі',
             category: 'Примикання до траси',
             description: 'Влаштування під\'їзних шляхів та примикання до автомобільної дороги державного значення М-01 (Київ – Чернігів). Забезпечено відповідність найвищим стандартам безпеки на швидкісній магістралі.',
-            image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2069&auto=format&fit=crop',
+            image: planM01Img,
             lat: 50.5630,
             lng: 30.8320
         },
         {
             id: 5,
-            title: 'Реконструкція АЗС (с. Кам\'янка)',
+            title: 'Реконструкція АЗС у селі Кам\'янка',
             location: 'с. Кам\'янка, Хмельницька обл.',
             year: '2025',
             budget: 'В роботі',

@@ -1,4 +1,7 @@
 // Дані для immersive секції проєктів з фоновими зображеннями
+import planM01Img from '../assets/images/plan_m01.jpg';
+import planM01Img2 from '../assets/images/plan_m01_2.jpg';
+
 export const PROJECTS_IMMERSIVE = {
     uk: [
         {
@@ -39,12 +42,13 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Під\'їзні шляхи до М-01',
             description: 'Влаштування під\'їзних шляхів та примикання до автомобільної дороги державного значення М-01 (Київ – Чернігів).',
             location: 'Київська область (траса М-01)',
-            backgroundImage: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2069&auto=format&fit=crop'
+            backgroundImage: planM01Img,
+            gallery: [planM01Img, planM01Img2]
         },
         {
             id: 5,
             category: 'Комерційна інфраструктура / АЗС',
-            title: 'Реконструкція АЗС (с. Кам\'янка)',
+            title: 'Реконструкція АЗС у селі Кам\'янка',
             description: 'Розробка організації дорожнього руху в рамках реконструкції автозаправної станції.',
             location: 'с. Кам\'янка, Хмельницька обл.',
             backgroundImage: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?q=80&w=2070&auto=format&fit=crop'
