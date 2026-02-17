@@ -24,8 +24,8 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, intro, d
                 animate: { opacity: 1, y: 0 }
             }}
             onClick={() => setIsOpen(!isOpen)}
-            className={`p-8 md:p-10 rounded-2xl bg-background border transition-all duration-300 group cursor-pointer flex flex-col
-                ${isOpen ? 'border-accent shadow-lg h-[750px] overflow-y-auto' : 'border-foreground/5 hover:shadow-xl hover:border-accent/30 h-[380px] overflow-hidden'}
+            className={`p-6 md:p-10 rounded-2xl bg-background border transition-all duration-300 group cursor-pointer flex flex-col
+                ${isOpen ? 'border-accent shadow-lg h-auto md:h-[750px] overflow-y-auto' : 'border-foreground/5 hover:shadow-xl hover:border-accent/30 h-auto md:h-[380px] overflow-hidden'}
             `}
         >
             <div className="flex flex-col h-full">
@@ -45,9 +45,9 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, intro, d
                         </motion.div>
                     </div>
 
-                    <motion.h3 layout="position" className="text-2xl font-bold mb-4 leading-tight whitespace-pre-line h-[72px]">{title}</motion.h3>
+                    <motion.h3 layout="position" className="text-2xl font-bold mb-4 leading-tight whitespace-pre-line h-auto md:h-[72px]">{title}</motion.h3>
 
-                    <motion.p layout="position" className="text-foreground/60 leading-relaxed mb-6 font-medium h-[80px]">
+                    <motion.p layout="position" className="text-foreground/60 leading-relaxed mb-6 font-medium h-auto md:h-[80px]">
                         {intro}
                     </motion.p>
 
