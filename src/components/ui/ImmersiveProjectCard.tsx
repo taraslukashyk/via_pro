@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, X, Maximize, ChevronLeft, ChevronRight } from 'lucide-react';
+import { MapPin, X, Maximize, ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 
 interface ImmersiveProjectCardProps {
     project: {
@@ -21,6 +21,8 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
     // Індекс поточного зображення в галереї
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    // Стан розгортання мобільної картки
+    const [isCardExpanded, setIsCardExpanded] = useState(false);
 
     // Якщо є галерея — використовуємо її, інакше одне зображення
     const images = project.gallery && project.gallery.length > 0
@@ -203,22 +205,51 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
                     )}
                 </motion.div>
 
-                {/* Компактна картка внизу */}
+                {/* Компактна картка внизу — розгортається при натисканні */}
                 <motion.div
-                    className="mx-4 mb-16 glass-card px-5 py-4"
+                    className="mx-4 mb-16 glass-card px-5 py-4 cursor-pointer"
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
                     viewport={{ once: false, amount: 0.5 }}
+                    onClick={() => setIsCardExpanded(!isCardExpanded)}
+                    layout
                 >
-                    <span className="inline-block px-3 py-1 text-[10px] font-semibold tracking-wider uppercase text-white/80 border border-white/20 rounded-full bg-white/5 mb-2">
-                        {project.category}
-                    </span>
-                    <h2 className="text-lg font-bold text-white leading-snug">{project.title}</h2>
-                    <div className="flex items-center gap-1.5 text-white/60 mt-1.5">
-                        <MapPin size={14} className="text-orange-400" />
-                        <span className="text-xs font-medium">{project.location}</span>
+                    <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                            <span className="inline-block px-3 py-1 text-[10px] font-semibold tracking-wider uppercase text-white/80 border border-white/20 rounded-full bg-white/5 mb-2">
+                                {project.category}
+                            </span>
+                            <h2 className="text-lg font-bold text-white leading-snug">{project.title}</h2>
+                            <div className="flex items-center gap-1.5 text-white/60 mt-1.5">
+                                <MapPin size={14} className="text-orange-400" />
+                                <span className="text-xs font-medium">{project.location}</span>
+                            </div>
+                        </div>
+                        {/* Іконка розгортання */}
+                        <motion.div
+                            animate={{ rotate: isCardExpanded ? 180 : 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="text-white/40 mt-1 ml-2 shrink-0"
+                        >
+                            <ChevronDown size={20} />
+                        </motion.div>
                     </div>
+
+                    {/* Розгортуваний опис */}
+                    <AnimatePresence>
+                        {isCardExpanded && (
+                            <motion.p
+                                initial={{ opacity: 0, height: 0, marginTop: 0 }}
+                                animate={{ opacity: 1, height: 'auto', marginTop: 12 }}
+                                exit={{ opacity: 0, height: 0, marginTop: 0 }}
+                                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                                className="text-sm text-white/70 leading-relaxed overflow-hidden"
+                            >
+                                {project.description}
+                            </motion.p>
+                        )}
+                    </AnimatePresence>
                 </motion.div>
             </div>
 
@@ -246,6 +277,16 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
             )}
 
             {/* Лічильник проєктів */}
+            {/* Mobile: Top Left */}
+            <div className="absolute top-24 left-6 z-30 md:hidden">
+                <span className="text-white/40 text-sm font-medium">
+                    <span className="text-white text-2xl font-bold">{String(index + 1).padStart(2, '0')}</span>
+                    <span className="mx-2">/</span>
+                    <span>{String(totalProjects).padStart(2, '0')}</span>
+                </span>
+            </div>
+
+            {/* Desktop: Bottom Right */}
             <div className="absolute bottom-8 right-8 z-20 hidden md:block">
                 <span className="text-white/40 text-sm font-medium">
                     <span className="text-white text-2xl font-bold">{String(index + 1).padStart(2, '0')}</span>

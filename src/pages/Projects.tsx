@@ -241,10 +241,10 @@ const Projects: React.FC = () => {
                 </div>
             </section>
 
-            {/* Scroll to Top Button */}
+            {/* Scroll to Top Button - hidden on mobile */}
             <motion.button
                 onClick={scrollToTop}
-                className="fixed bottom-20 right-8 z-50 w-12 h-12 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all"
+                className="fixed bottom-20 right-8 z-50 w-12 h-12 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full hidden md:flex items-center justify-center text-white hover:bg-white/20 transition-all"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{
                     opacity: showScrollTop ? 1 : 0,
