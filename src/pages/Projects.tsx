@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, ChevronUp } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 import { PROJECTS_IMMERSIVE } from '../data/projectsImmersive';
 import { ImmersiveProjectCard } from '../components/ui/ImmersiveProjectCard';
 import { useTranslation } from '../translations';
@@ -12,6 +13,21 @@ const Projects: React.FC = () => {
     const [showScrollTop, setShowScrollTop] = React.useState(false);
     const t = useTranslation();
     const { language } = useLanguage();
+    const location = useLocation();
+
+    // Обробка hash-навігації для скролу до конкретного проєкту
+    useEffect(() => {
+        if (location.hash) {
+            // Невелика затримка для рендерингу контенту
+            const timer = setTimeout(() => {
+                const element = document.getElementById(location.hash.slice(1));
+                if (element && containerRef.current) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 300);
+            return () => clearTimeout(timer);
+        }
+    }, [location.hash]);
 
     useEffect(() => {
         const container = containerRef.current;

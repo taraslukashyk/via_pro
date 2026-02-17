@@ -177,28 +177,43 @@ const Home: React.FC = () => {
 
                 <Carousel className="w-full">
                     {PROJECTS[language].map((project) => (
-                        <div
+                        <Link
                             key={project.id}
-                            className="relative group aspect-[16/10] overflow-hidden rounded-3xl border border-white/10"
+                            to={`/projects#project-${project.id}`}
+                            className="block"
+                            draggable={false}
                         >
-                            <img
-                                src={project.image}
-                                alt={project.title}
-                                className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
-                                draggable={false}
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 md:p-12 flex flex-col justify-end text-white">
-                                <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                    <span className="text-white/70 font-medium tracking-wider text-sm md:text-base mb-3 block">{project.category}</span>
-                                    <h3 className="text-2xl md:text-4xl font-bold mb-3">{project.title}</h3>
-                                    <p className="text-white/80 text-base md:text-lg line-clamp-2 max-w-xl mb-6">{project.description}</p>
-                                    <div className="flex items-center gap-2 text-sm text-white/60">
-                                        <MapPin size={16} />
+                            <div
+                                className="relative group aspect-[3/4] md:aspect-square overflow-hidden rounded-3xl border border-white/10 cursor-pointer"
+                            >
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+                                    draggable={false}
+                                />
+                                {/* ПК: повний overlay з описом */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 md:p-12 hidden md:flex flex-col justify-end text-white">
+                                    <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                        <span className="text-white/70 font-medium tracking-wider text-sm md:text-base mb-3 block">{project.category}</span>
+                                        <h3 className="text-2xl md:text-4xl font-bold mb-3">{project.title}</h3>
+                                        <p className="text-white/80 text-base md:text-lg line-clamp-2 max-w-xl mb-6">{project.description}</p>
+                                        <div className="flex items-center gap-2 text-sm text-white/60">
+                                            <MapPin size={16} />
+                                            {project.location}
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* Мобільний: компактний overlay тільки з назвою внизу */}
+                                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-4 py-3 md:hidden text-white">
+                                    <h3 className="text-sm font-bold leading-tight">{project.title}</h3>
+                                    <div className="flex items-center gap-1 text-[11px] text-white/60 mt-1">
+                                        <MapPin size={12} />
                                         {project.location}
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </Carousel>
 

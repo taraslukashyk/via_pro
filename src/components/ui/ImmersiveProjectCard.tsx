@@ -20,6 +20,7 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
 
     return (
         <section
+            id={`project-${project.id}`}
             className="immersive-section relative w-full h-screen flex items-center overflow-hidden"
             style={{ scrollSnapAlign: 'start' }}
         >
