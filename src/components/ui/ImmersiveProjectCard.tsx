@@ -29,13 +29,20 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
     const hasGallery = images.length > 1;
     const currentImage = images[currentImageIndex];
 
-    const nextImage = (e: React.MouseEvent) => {
-        e.stopPropagation();
-        setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    };
-    const prevImage = (e: React.MouseEvent) => {
-        e.stopPropagation();
-        setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+    const goNext = () => setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    const goPrev = () => setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+
+    const nextImage = (e: React.MouseEvent) => { e.stopPropagation(); goNext(); };
+    const prevImage = (e: React.MouseEvent) => { e.stopPropagation(); goPrev(); };
+
+    // Обробник свайпу — визначаємо напрямок по offset і velocity
+    const handleDragEnd = (_: unknown, info: { offset: { x: number }; velocity: { x: number } }) => {
+        const swipeThreshold = 50;
+        if (info.offset.x < -swipeThreshold || info.velocity.x < -500) {
+            goNext();
+        } else if (info.offset.x > swipeThreshold || info.velocity.x > 500) {
+            goPrev();
+        }
     };
 
     return (
@@ -153,19 +160,24 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
             {/* === MOBILE === */}
             <div className="relative z-20 w-full h-full flex md:hidden flex-col justify-end">
                 <motion.div
-                    className="absolute inset-x-4 top-20 bottom-36 rounded-xl overflow-hidden shadow-xl cursor-pointer"
+                    className="absolute inset-x-4 top-20 bottom-36 rounded-xl overflow-hidden shadow-xl cursor-pointer touch-pan-y"
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.7, ease: 'easeOut' }}
                     viewport={{ once: false, amount: 0.3 }}
                     onClick={() => setIsLightboxOpen(true)}
+                    // Свайп для мобільних пристроїв
+                    drag={hasGallery ? "x" : false}
+                    dragConstraints={{ left: 0, right: 0 }}
+                    dragElastic={0.3}
+                    onDragEnd={hasGallery ? handleDragEnd : undefined}
                 >
                     <AnimatePresence mode="wait">
                         <motion.img
                             key={currentImageIndex}
                             src={currentImage}
                             alt={project.title}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover pointer-events-none"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
