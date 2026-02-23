@@ -10,7 +10,16 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Кільцева розв\'язка (м. Вишневе)',
             description: 'Влаштування транспортної розв\'язки кільцевого типу на перехресті вул. Лесі Українки та вул. Паркова.',
             location: 'м. Вишневе, Київська обл.',
-            backgroundImage: '/assets/images/visneve-ring.png'
+            backgroundImage: '/assets/images/visneve-ring/visneve-ring.png',
+            gallery: [
+                '/assets/images/visneve-ring/visneve-ring.png',
+                '/assets/images/visneve-ring/Image2.png',
+                '/assets/images/visneve-ring/Image3.png',
+                '/assets/images/visneve-ring/Image4.png',
+                '/assets/images/visneve-ring/Image5.png',
+                '/assets/images/visneve-ring/Image6.png',
+                '/assets/images/visneve-ring/Image7.png',
+            ]
         },
         {
             id: 2,
@@ -18,7 +27,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Тротуари та паркування (м. Вишневе)',
             description: 'Капітальний ремонт тротуару по вул. Київська з влаштуванням заїзних кишень для громадського транспорту та автостоянок.',
             location: 'м. Вишневе, Київська обл.',
-            backgroundImage: '/assets/images/visneve-walk.png'
+            backgroundImage: '/assets/images/visneve-walk/visneve-walk.png'
         },
         {
             id: 9,
@@ -26,7 +35,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Реконструкція електропостачання',
             description: 'Реконструкція системи електропостачання котельні з влаштуванням точки підключення когенераційної установки в м. Ватутіне.',
             location: 'м. Ватутіне, Черкаська обл.',
-            backgroundImage: '/assets/images/vatutine-electro-new.jpeg'
+            backgroundImage: '/assets/images/vatutine-electro/vatutine-electro-new.jpeg'
         },
         {
             id: 3,
@@ -34,7 +43,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Схема ОДР громади (м. Біла Церква)',
             description: 'Комплексна розробка та погодження схеми організації дорожнього руху на території міської територіальної громади.',
             location: 'м. Біла Церква, Київська обл.',
-            backgroundImage: '/assets/images/bila.jpeg'
+            backgroundImage: '/assets/images/bila/bila.jpeg'
         },
         {
             id: 4,
@@ -99,7 +108,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Технічний нагляд за дорогами',
             description: 'Технічний нагляд за будівництвом та ремонтом доріг у м. Обухів, Українка, Ржищів, Ватутіне та селах регіонів.',
             location: 'Київська та Черкаська області',
-            backgroundImage: '/assets/images/naglad.jpeg'
+            backgroundImage: '/assets/images/naglad/naglad.jpeg'
         },
         {
             id: 13,
@@ -117,7 +126,16 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Roundabout (Vyshneve)',
             description: 'Construction of a circular-type traffic interchange at the intersection of Lesia Ukrainka St. and Parkova St.',
             location: 'Vyshneve, Kyiv region',
-            backgroundImage: '/assets/images/visneve-ring.png'
+            backgroundImage: '/assets/images/visneve-ring/visneve-ring.png',
+            gallery: [
+                '/assets/images/visneve-ring/visneve-ring.png',
+                '/assets/images/visneve-ring/Image2.png',
+                '/assets/images/visneve-ring/Image3.png',
+                '/assets/images/visneve-ring/Image4.png',
+                '/assets/images/visneve-ring/Image5.png',
+                '/assets/images/visneve-ring/Image6.png',
+                '/assets/images/visneve-ring/Image7.png',
+            ]
         },
         {
             id: 2,
@@ -125,7 +143,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Sidewalks and Parking (Vyshneve)',
             description: 'Major repair of the sidewalk on Kyivska St. with the construction of bus bays and parking lots.',
             location: 'Vyshneve, Kyiv region',
-            backgroundImage: '/assets/images/visneve-walk.png'
+            backgroundImage: '/assets/images/visneve-walk/visneve-walk.png'
         },
         {
             id: 9,
@@ -133,7 +151,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Power Supply Reconstruction',
             description: 'Reconstruction of the boiler house power supply system with the installation of a cogeneration unit connection point.',
             location: 'Vatutine, Cherkasy region',
-            backgroundImage: '/assets/images/vatutine-electro-new.jpeg'
+            backgroundImage: '/assets/images/vatutine-electro/vatutine-electro-new.jpeg'
         },
         {
             id: 3,
@@ -141,7 +159,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Community Traffic Scheme (Bila Tserkva)',
             description: 'Comprehensive development and approval of a traffic organization scheme for the urban territorial community.',
             location: 'Bila Tserkva, Kyiv region',
-            backgroundImage: '/assets/images/bila.jpeg'
+            backgroundImage: '/assets/images/bila/bila.jpeg'
         },
         {
             id: 4,
@@ -206,7 +224,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Road Construction Supervision',
             description: 'Technical supervision of road construction and repair in Obukhiv, Ukrainka, Rzhyshchiv, Vatutine and regional villages.',
             location: 'Kyiv and Cherkasy regions',
-            backgroundImage: '/assets/images/naglad.jpeg'
+            backgroundImage: '/assets/images/naglad/naglad.jpeg'
         },
         {
             id: 13,

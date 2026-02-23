@@ -10,7 +10,7 @@ export const PROJECTS = {
             budget: 'Реалізовано',
             category: 'Дорожня інфраструктура',
             description: 'Влаштування транспортної розв\'язки кільцевого типу на перехресті вул. Лесі Українки та вул. Паркова. Проєкт забезпечив підвищення безпеки руху та пропускної здатності перехрестя.',
-            image: '/assets/images/visneve-ring.png',
+            image: '/assets/images/visneve-ring/visneve-ring.png',
             lat: 50.3865,
             lng: 30.3600
         },
@@ -22,7 +22,7 @@ export const PROJECTS = {
             budget: 'В роботі',
             category: 'Міський благоустрій',
             description: 'Капітальний ремонт тротуару по вул. Київська з влаштуванням заїзних кишень для громадського транспорту та автостоянок. Створено інклюзивний та комфортний простір для пішоходів.',
-            image: '/assets/images/visneve-walk.png',
+            image: '/assets/images/visneve-walk/visneve-walk.png',
             lat: 50.3920,
             lng: 30.3750
         },
@@ -34,7 +34,7 @@ export const PROJECTS = {
             budget: 'В роботі',
             category: 'Енергетика',
             description: 'Реконструкція системи електропостачання котельні з влаштуванням точки підключення когенераційної установки. Підвищено надійність енергозабезпечення критичної інфраструктури.',
-            image: '/assets/images/vatutine-electro-new.jpeg',
+            image: '/assets/images/vatutine-electro/vatutine-electro-new.jpeg',
             lat: 49.0167,
             lng: 31.0667
         },
@@ -46,7 +46,7 @@ export const PROJECTS = {
             budget: 'Реалізовано',
             category: 'Організація дорожнього руху',
             description: 'Комплексна розробка та погодження схеми організації дорожнього руху на території міської територіальної громади. Впроваджено сучасні рішення для оптимізації транспортних і пішохідних потоків.',
-            image: '/assets/images/bila.jpeg',
+            image: '/assets/images/bila/bila.jpeg',
             lat: 49.7969,
             lng: 30.1144
         },
@@ -142,7 +142,7 @@ export const PROJECTS = {
             budget: 'В роботі',
             category: 'Технічний нагляд',
             description: 'Технічний нагляд за будівництвом та ремонтом доріг у м. Обухів, Українка, Ржищів, Ватутіне та селах регіонів. Контроль якості виконання робіт та дотримання технологічних процесів.',
-            image: '/assets/images/naglad.jpeg', // Placeholder: road construction inspection
+            image: '/assets/images/naglad/naglad.jpeg',
             lat: 50.1136,
             lng: 30.6225
         },
@@ -168,7 +168,7 @@ export const PROJECTS = {
             budget: 'Completed',
             category: 'Road Infrastructure',
             description: 'Construction of a circular-type traffic interchange at the intersection of Lesia Ukrainka St. and Parkova St. The project improved traffic safety and intersection capacity.',
-            image: '/assets/images/visneve-ring.png',
+            image: '/assets/images/visneve-ring/visneve-ring.png',
             lat: 50.3865,
             lng: 30.3600
         },
@@ -180,7 +180,7 @@ export const PROJECTS = {
             budget: 'In Progress',
             category: 'Urban Improvement',
             description: 'Major repair of the sidewalk on Kyivska St. with the construction of bus bays and parking lots. Created an inclusive and comfortable space for pedestrians.',
-            image: '/assets/images/visneve-walk.png',
+            image: '/assets/images/visneve-walk/visneve-walk.png',
             lat: 50.3920,
             lng: 30.3750
         },
@@ -192,7 +192,7 @@ export const PROJECTS = {
             budget: 'In Progress',
             category: 'Energy Infrastructure',
             description: 'Reconstruction of the boiler house power supply system with the installation of a cogeneration unit connection point. Improved reliability of critical infrastructure power supply.',
-            image: '/assets/images/vatutine-electro-new.jpeg',
+            image: '/assets/images/vatutine-electro/vatutine-electro-new.jpeg',
             lat: 49.0167,
             lng: 31.0667
         },
@@ -204,7 +204,7 @@ export const PROJECTS = {
             budget: 'Completed',
             category: 'Traffic Organization',
             description: 'Comprehensive development and approval of a traffic organization scheme for the urban territorial community. Implemented modern solutions to optimize traffic and pedestrian flows.',
-            image: '/assets/images/bila.jpeg',
+            image: '/assets/images/bila/bila.jpeg',
             lat: 49.7969,
             lng: 30.1144
         },
@@ -300,7 +300,7 @@ export const PROJECTS = {
             budget: 'In Progress',
             category: 'Technical Supervision',
             description: 'Technical supervision of road construction and repair in Obukhiv, Ukrainka, Rzhyshchiv, Vatutine and regional villages. Quality control of work execution and adherence to technological processes.',
-            image: '/assets/images/naglad.jpeg',
+            image: '/assets/images/naglad/naglad.jpeg',
             lat: 50.1136,
             lng: 30.6225
         },
