@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useRef } from 'react';
+import { motion, AnimatePresence, cubicBezier } from 'framer-motion';
 import { MapPin, X, Maximize, ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 
 interface ImmersiveProjectCardProps {
@@ -21,6 +21,8 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
     // Індекс поточного зображення в галереї
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    // Напрямок анімації: 1 — вперед (→), -1 — назад (←)
+    const direction = useRef<1 | -1>(1);
     // Стан розгортання мобільної картки
     const [isCardExpanded, setIsCardExpanded] = useState(false);
 
@@ -30,12 +32,33 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
         : [project.backgroundImage];
     const hasGallery = images.length > 1;
     const currentImage = images[currentImageIndex];
+    // Перше зображення залишається статичним на фоні завжди
+    const staticBgImage = images[0];
 
-    const goNext = () => setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    const goPrev = () => setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+    const goNext = () => {
+        direction.current = 1;
+        setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    };
+    const goPrev = () => {
+        direction.current = -1;
+        setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+    };
+    const goTo = (i: number) => {
+        direction.current = i > currentImageIndex ? 1 : -1;
+        setCurrentImageIndex(i);
+    };
 
     const nextImage = (e: React.MouseEvent) => { e.stopPropagation(); goNext(); };
     const prevImage = (e: React.MouseEvent) => { e.stopPropagation(); goPrev(); };
+
+    // Варіанти анімації для слайду
+    const slideVariants = {
+        enter: (dir: number) => ({ x: dir * 60, opacity: 0, scale: 1.04 }),
+        center: { x: 0, opacity: 1, scale: 1 },
+        exit: (dir: number) => ({ x: dir * -60, opacity: 0, scale: 0.97 }),
+    };
+    const slideEase = cubicBezier(0.32, 0.72, 0, 1);
+    const slideTransition = { duration: 0.55, ease: slideEase };
 
     // Обробник свайпу — визначаємо напрямок по offset і velocity
     const handleDragEnd = (_: unknown, info: { offset: { x: number }; velocity: { x: number } }) => {
@@ -53,7 +76,7 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
             className="immersive-section relative w-full h-screen flex items-center overflow-hidden"
             style={{ scrollSnapAlign: 'start' }}
         >
-            {/* Заблюрене фонове зображення */}
+            {/* Заблюрене фонове зображення — завжди перше з галереї */}
             <motion.div
                 className="absolute inset-0 z-0"
                 initial={{ scale: 1.15 }}
@@ -62,7 +85,7 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
                 viewport={{ once: false, amount: 0.3 }}
             >
                 <img
-                    src={currentImage}
+                    src={staticBgImage}
                     alt=""
                     aria-hidden="true"
                     className="w-full h-full object-cover project-bg-blur"
@@ -109,16 +132,19 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
                     viewport={{ once: false, amount: 0.3 }}
                     onClick={() => setIsLightboxOpen(true)}
                 >
-                    <AnimatePresence mode="wait">
+                    <AnimatePresence mode="popLayout" custom={direction.current}>
                         <motion.img
                             key={currentImageIndex}
                             src={currentImage}
                             alt={project.title}
                             className="w-full h-full object-cover"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.3 }}
+                            custom={direction.current}
+                            variants={slideVariants}
+                            initial="enter"
+                            animate="center"
+                            exit="exit"
+                            transition={slideTransition}
+                            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
                         />
                     </AnimatePresence>
 
@@ -144,8 +170,8 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
                                 {images.map((_, i) => (
                                     <button
                                         key={i}
-                                        onClick={(e) => { e.stopPropagation(); setCurrentImageIndex(i); }}
-                                        className={`h-1.5 rounded-full transition-all duration-300 ${i === currentImageIndex ? 'w-6 bg-white' : 'w-1.5 bg-white/50'}`}
+                                        onClick={(e) => { e.stopPropagation(); goTo(i); }}
+                                        className={`h-1.5 rounded-full transition-all duration-500 ease-out ${i === currentImageIndex ? 'w-6 bg-white shadow-[0_0_8px_rgba(255,255,255,0.6)]' : 'w-1.5 bg-white/40 hover:bg-white/70'}`}
                                     />
                                 ))}
                             </div>
@@ -174,16 +200,19 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
                     dragElastic={0.3}
                     onDragEnd={hasGallery ? handleDragEnd : undefined}
                 >
-                    <AnimatePresence mode="wait">
+                    <AnimatePresence mode="popLayout" custom={direction.current}>
                         <motion.img
                             key={currentImageIndex}
                             src={currentImage}
                             alt={project.title}
                             className="w-full h-full object-cover pointer-events-none"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.3 }}
+                            custom={direction.current}
+                            variants={slideVariants}
+                            initial="enter"
+                            animate="center"
+                            exit="exit"
+                            transition={slideTransition}
+                            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
                         />
                     </AnimatePresence>
 
@@ -198,7 +227,7 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
                             </button>
                             <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
                                 {images.map((_, i) => (
-                                    <div key={i} className={`h-1 rounded-full transition-all ${i === currentImageIndex ? 'w-4 bg-white' : 'w-1 bg-white/50'}`} />
+                                    <div key={i} className={`h-1 rounded-full transition-all duration-500 ease-out ${i === currentImageIndex ? 'w-4 bg-white shadow-[0_0_6px_rgba(255,255,255,0.5)]' : 'w-1 bg-white/40'}`} />
                                 ))}
                             </div>
                         </>
@@ -314,16 +343,21 @@ export const ImmersiveProjectCard: React.FC<ImmersiveProjectCardProps> = ({ proj
                             <X size={28} />
                         </button>
 
-                        <motion.img
-                            src={currentImage}
-                            alt={project.title}
-                            className="max-w-[95vw] max-h-[90vh] object-contain rounded-lg shadow-2xl cursor-default"
-                            initial={{ scale: 0.85, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.85, opacity: 0 }}
-                            transition={{ duration: 0.3, ease: 'easeOut' }}
-                            onClick={(e) => e.stopPropagation()}
-                        />
+                        <AnimatePresence mode="popLayout" custom={direction.current}>
+                            <motion.img
+                                key={`lb-${currentImageIndex}`}
+                                src={currentImage}
+                                alt={project.title}
+                                className="max-w-[95vw] max-h-[90vh] object-contain rounded-lg shadow-2xl cursor-default"
+                                custom={direction.current}
+                                variants={slideVariants}
+                                initial="enter"
+                                animate="center"
+                                exit="exit"
+                                transition={{ duration: 0.45, ease: [0.32, 0.72, 0, 1] }}
+                                onClick={(e) => e.stopPropagation()}
+                            />
+                        </AnimatePresence>
 
                         {/* Стрілки в лайтбоксі */}
                         {hasGallery && (

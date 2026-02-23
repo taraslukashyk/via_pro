@@ -27,7 +27,15 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Тротуари та паркування (м. Вишневе)',
             description: 'Капітальний ремонт тротуару по вул. Київська з влаштуванням заїзних кишень для громадського транспорту та автостоянок.',
             location: 'м. Вишневе, Київська обл.',
-            backgroundImage: '/assets/images/visneve-walk/visneve-walk.png'
+            backgroundImage: '/assets/images/visneve-walk/visneve-walk.png',
+            gallery: [
+                '/assets/images/visneve-walk/visneve-walk.png',
+                '/assets/images/visneve-walk/Image1.png',
+                '/assets/images/visneve-walk/Image2.png',
+                '/assets/images/visneve-walk/Image3.png',
+                '/assets/images/visneve-walk/Image4.png',
+                '/assets/images/visneve-walk/Image6.png',
+            ]
         },
         {
             id: 9,
@@ -143,7 +151,15 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Sidewalks and Parking (Vyshneve)',
             description: 'Major repair of the sidewalk on Kyivska St. with the construction of bus bays and parking lots.',
             location: 'Vyshneve, Kyiv region',
-            backgroundImage: '/assets/images/visneve-walk/visneve-walk.png'
+            backgroundImage: '/assets/images/visneve-walk/visneve-walk.png',
+            gallery: [
+                '/assets/images/visneve-walk/visneve-walk.png',
+                '/assets/images/visneve-walk/Image1.png',
+                '/assets/images/visneve-walk/Image2.png',
+                '/assets/images/visneve-walk/Image3.png',
+                '/assets/images/visneve-walk/Image4.png',
+                '/assets/images/visneve-walk/Image6.png',
+            ]
         },
         {
             id: 9,
