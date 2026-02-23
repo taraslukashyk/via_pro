@@ -46,7 +46,7 @@ export const PROJECTS = {
             budget: 'Реалізовано',
             category: 'Організація дорожнього руху',
             description: 'Комплексна розробка та погодження схеми організації дорожнього руху на території міської територіальної громади. Впроваджено сучасні рішення для оптимізації транспортних і пішохідних потоків.',
-            image: '/assets/images/bila/bila.jpeg',
+            image: '/assets/images/bila/bila.jpg',
             lat: 49.7969,
             lng: 30.1144
         },
@@ -82,7 +82,7 @@ export const PROJECTS = {
             budget: 'В роботі',
             category: 'Організація дорожнього руху',
             description: 'Розроблення схеми організації дорожнього руху для вулиць і провулків центральної частини міста. Впорядковано паркування та рух транспорту в історицентрі.',
-            image: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2144&auto=format&fit=crop',
+            image: '/assets/images/skvyra/Image1.jpg',
             lat: 49.7335,
             lng: 29.6496
         },
@@ -204,7 +204,7 @@ export const PROJECTS = {
             budget: 'Completed',
             category: 'Traffic Organization',
             description: 'Comprehensive development and approval of a traffic organization scheme for the urban territorial community. Implemented modern solutions to optimize traffic and pedestrian flows.',
-            image: '/assets/images/bila/bila.jpeg',
+            image: '/assets/images/bila/bila.jpg',
             lat: 49.7969,
             lng: 30.1144
         },
@@ -240,7 +240,7 @@ export const PROJECTS = {
             budget: 'In Progress',
             category: 'Traffic Organization',
             description: 'Development of a traffic organization scheme for streets and alleys in the central part of the city. Organized parking and traffic in the historic center.',
-            image: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2144&auto=format&fit=crop',
+            image: '/assets/images/skvyra/Image1.jpg',
             lat: 49.7335,
             lng: 29.6496
         },

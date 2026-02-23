@@ -51,7 +51,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Схема ОДР громади (м. Біла Церква)',
             description: 'Комплексна розробка та погодження схеми організації дорожнього руху на території міської територіальної громади.',
             location: 'м. Біла Церква, Київська обл.',
-            backgroundImage: '/assets/images/bila/bila.jpeg'
+            backgroundImage: '/assets/images/bila/bila.jpg'
         },
         {
             id: 4,
@@ -76,7 +76,12 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Схема руху центру міста (м. Сквира)',
             description: 'Розроблення схеми організації дорожнього руху для вулиць і провулків центральної частини міста.',
             location: 'м. Сквира, Київська обл.',
-            backgroundImage: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2144&auto=format&fit=crop'
+            backgroundImage: '/assets/images/skvyra/Image1.jpg',
+            gallery: [
+                '/assets/images/skvyra/Image1.jpg',
+                '/assets/images/skvyra/Image2.jpg',
+                '/assets/images/skvyra/Image3.jpg',
+            ]
         },
         {
             id: 7,
@@ -199,7 +204,12 @@ export const PROJECTS_IMMERSIVE = {
             title: 'City Center Traffic Scheme (Skvyra)',
             description: 'Development of a traffic organization scheme for streets and alleys in the central part of the city.',
             location: 'Skvyra, Kyiv region',
-            backgroundImage: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2144&auto=format&fit=crop'
+            backgroundImage: '/assets/images/skvyra/Image1.jpg',
+            gallery: [
+                '/assets/images/skvyra/Image1.jpg',
+                '/assets/images/skvyra/Image2.jpg',
+                '/assets/images/skvyra/Image3.jpg',
+            ]
         },
         {
             id: 7,
