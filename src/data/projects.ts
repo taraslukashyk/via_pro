@@ -70,7 +70,7 @@ export const PROJECTS = {
             budget: 'В роботі',
             category: 'Комерційна інфраструктура',
             description: 'Розробка організації дорожнього руху в рамках реконструкції автозаправної станції. Створено зручні схеми заїзду та виїзду, паркомісця та пішохідні зони.',
-            image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?q=80&w=2070&auto=format&fit=crop',
+            image: '/assets/images/kamianka/kamianka-azs.jpg',
             lat: 48.6875,
             lng: 26.6110
         },
@@ -94,7 +94,7 @@ export const PROJECTS = {
             budget: 'В роботі',
             category: 'Мостові споруди',
             description: 'Капітальний ремонт мосту та підходів до нього по вул. Ринковій. Передбачено посилення конструкцій, оновлення дорожнього покриття та встановлення сучасного бар\'єрного огородження.',
-            image: 'https://images.unsplash.com/photo-1545893835-abaa50cbe628?q=80&w=2070&auto=format&fit=crop',
+            image: '/assets/images/berdychiv-bridge/bridge.jpg',
             lat: 49.8919,
             lng: 28.5866
         },
@@ -228,7 +228,7 @@ export const PROJECTS = {
             budget: 'In Progress',
             category: 'Commercial Infrastructure',
             description: 'Development of traffic organization as part of gas station reconstruction. Created convenient entry and exit schemes, parking spaces and pedestrian zones.',
-            image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?q=80&w=2070&auto=format&fit=crop',
+            image: '/assets/images/kamianka/kamianka-azs.jpg',
             lat: 48.6875,
             lng: 26.6110
         },
@@ -252,7 +252,7 @@ export const PROJECTS = {
             budget: 'In Progress',
             category: 'Bridge Structures',
             description: 'Major repair of the bridge and approaches to it on Rynkova St. Includes structural reinforcement, road surface renewal and installation of modern barrier fencing.',
-            image: 'https://images.unsplash.com/photo-1545893835-abaa50cbe628?q=80&w=2070&auto=format&fit=crop',
+            image: '/assets/images/berdychiv-bridge/bridge.jpg',
             lat: 49.8919,
             lng: 28.5866
         },

@@ -68,7 +68,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Реконструкція АЗС у селі Кам\'янка',
             description: 'Розробка організації дорожнього руху в рамках реконструкції автозаправної станції.',
             location: 'с. Кам\'янка, Хмельницька обл.',
-            backgroundImage: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?q=80&w=2070&auto=format&fit=crop'
+            backgroundImage: '/assets/images/kamianka/kamianka-azs.jpg'
         },
         {
             id: 6,
@@ -89,7 +89,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Міст через р. Гнилоп\'ять',
             description: 'Капітальний ремонт мосту та підходів до нього по вул. Ринковій.',
             location: 'м. Бердичів, Житомирська обл.',
-            backgroundImage: 'https://images.unsplash.com/photo-1545893835-abaa50cbe628?q=80&w=2070&auto=format&fit=crop'
+            backgroundImage: '/assets/images/berdychiv-bridge/bridge.jpg'
         },
         {
             id: 8,
@@ -196,7 +196,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Gas Station Reconstruction (Kamianka)',
             description: 'Development of traffic organization as part of gas station reconstruction.',
             location: 'Kamianka, Khmelnytskyi region',
-            backgroundImage: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?q=80&w=2070&auto=format&fit=crop'
+            backgroundImage: '/assets/images/kamianka/kamianka-azs.jpg'
         },
         {
             id: 6,
