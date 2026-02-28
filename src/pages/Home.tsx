@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { COMPANY_INFO } from '../data/companyInfo';
-import { PROJECTS } from '../data/projects';
+import { PROJECTS_IMMERSIVE } from '../data/projectsImmersive';
 import { Button } from '../components/ui/Button';
 import { TransformingConsultationButton } from '../components/ui/TransformingConsultationButton';
 import { Section } from '../components/ui/Section';
@@ -176,7 +176,7 @@ const Home: React.FC = () => {
                 </div>
 
                 <Carousel className="w-full">
-                    {PROJECTS[language].map((project) => (
+                    {PROJECTS_IMMERSIVE[language].map((project) => (
                         <Link
                             key={project.id}
                             to={`/projects#project-${project.id}`}
@@ -187,7 +187,7 @@ const Home: React.FC = () => {
                                 className="relative group aspect-[3/4] md:aspect-square overflow-hidden rounded-3xl border border-white/10 cursor-pointer"
                             >
                                 <img
-                                    src={project.image}
+                                    src={project.backgroundImage}
                                     alt={project.title}
                                     className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
                                     draggable={false}
