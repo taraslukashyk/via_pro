@@ -46,6 +46,60 @@ export const PROJECTS_IMMERSIVE = {
             backgroundImage: '/assets/images/vatutine-electro/vatutine-electro-new.jpeg'
         },
         {
+            id: 14,
+            category: 'Капітальний ремонт / Інклюзивність',
+            title: 'Капітальний ремонт вхідної групи (пандус)',
+            description: 'Капітальний ремонт вхідної групи нежитлової будівлі по вул. М. Рильського у м. Сквира. Влаштування нормативного пандусу та сходів з монолітного залізобетону, тактильна навігація, безбар\'єрне середовище для МГН.',
+            location: 'м. Сквира, Київська обл.',
+            backgroundImage: '/assets/images/skvyra-pandus/Image1.png',
+            gallery: [
+                '/assets/images/skvyra-pandus/Image1.png',
+                '/assets/images/skvyra-pandus/Image2.png',
+                '/assets/images/skvyra-pandus/Image3.png',
+            ]
+        },
+        {
+            id: 15,
+            category: 'Капітальний ремонт / Інклюзивність',
+            title: 'Кап.ремонт вхідної групи ЦПМСД м. Сквира',
+            description: 'Капітальний ремонт вхідної групи Сквирського міського центру первинної медико-санітарної допомоги через влаштування пандусу, тактильних смуг та нового покриття. Безбар\'єрний доступ згідно ДБН В.2.2-40:2018.',
+            location: 'м. Сквира, Київська обл.',
+            backgroundImage: '/assets/images/skvyra-clinic/Image1.png',
+            gallery: [
+                '/assets/images/skvyra-clinic/Image1.png',
+                '/assets/images/skvyra-clinic/Image2.png',
+                '/assets/images/skvyra-clinic/Image3.png',
+                '/assets/images/skvyra-clinic/Image4.png',
+                '/assets/images/skvyra-clinic/Image5.png',
+                '/assets/images/skvyra-clinic/Image6.png',
+            ]
+        },
+        {
+            id: 12,
+            category: 'Технічний нагляд',
+            title: 'Технічний нагляд за дорогами',
+            description: 'Технічний нагляд за будівництвом та ремонтом доріг у м. Обухів, Українка, Ржищів, Ватутіне та селах регіонів.',
+            location: 'Київська та Черкаська області',
+            backgroundImage: '/assets/images/naglad/naglad.jpeg',
+            gallery: [
+                '/assets/images/naglad/naglad.jpeg',
+                '/assets/images/naglad/road-01.jpeg',
+                '/assets/images/naglad/road-02.jpeg',
+                '/assets/images/naglad/road-03.jpeg',
+                '/assets/images/naglad/road-04.jpeg',
+                '/assets/images/naglad/road-05.jpeg',
+                '/assets/images/naglad/road-06.jpeg',
+            ]
+        },
+        {
+            id: 7,
+            category: 'Мостові споруди',
+            title: 'Міст через р. Гнилоп\'ять',
+            description: 'Капітальний ремонт мосту та підходів до нього по вул. Ринковій.',
+            location: 'м. Бердичів, Житомирська обл.',
+            backgroundImage: '/assets/images/berdychiv-bridge/bridge.jpg'
+        },
+        {
             id: 3,
             category: 'Організація дорожнього руху (ОДР)',
             title: 'Схема ОДР громади (м. Біла Церква)',
@@ -84,14 +138,6 @@ export const PROJECTS_IMMERSIVE = {
             ]
         },
         {
-            id: 7,
-            category: 'Мостові споруди',
-            title: 'Міст через р. Гнилоп\'ять',
-            description: 'Капітальний ремонт мосту та підходів до нього по вул. Ринковій.',
-            location: 'м. Бердичів, Житомирська обл.',
-            backgroundImage: '/assets/images/berdychiv-bridge/bridge.jpg'
-        },
-        {
             id: 8,
             category: 'Інженерні мережі / Теплопостачання',
             title: 'Капітальний ремонт системи опалення (БМК-500)',
@@ -114,14 +160,6 @@ export const PROJECTS_IMMERSIVE = {
             description: 'Послуги Інженера-консультанта на об\'єктах капітального ремонту найпростіших укриттів у закладах дошкільної освіти (ЗДО №24, №41, №32).',
             location: 'м. Київ, Голосіївський район',
             backgroundImage: 'https://images.unsplash.com/photo-1590579491624-f98f36d4c763?q=80&w=2000&auto=format&fit=crop'
-        },
-        {
-            id: 12,
-            category: 'Технічний нагляд',
-            title: 'Технічний нагляд за дорогами',
-            description: 'Технічний нагляд за будівництвом та ремонтом доріг у м. Обухів, Українка, Ржищів, Ватутіне та селах регіонів.',
-            location: 'Київська та Черкаська області',
-            backgroundImage: '/assets/images/naglad/naglad.jpeg'
         },
         {
             id: 13,
@@ -175,12 +213,66 @@ export const PROJECTS_IMMERSIVE = {
             backgroundImage: '/assets/images/vatutine-electro/vatutine-electro-new.jpeg'
         },
         {
+            id: 14,
+            category: 'Capital Repair / Inclusivity',
+            title: 'Entrance Group Renovation (Ramp)',
+            description: 'Major repair of the entrance group of a non-residential building on M. Rylsky St. in Skvyra. Construction of a normative ramp and stairs from reinforced concrete, tactile navigation, and barrier-free access for people with disabilities.',
+            location: 'Skvyra, Kyiv region',
+            backgroundImage: '/assets/images/skvyra-pandus/Image1.png',
+            gallery: [
+                '/assets/images/skvyra-pandus/Image1.png',
+                '/assets/images/skvyra-pandus/Image2.png',
+                '/assets/images/skvyra-pandus/Image3.png',
+            ]
+        },
+        {
+            id: 15,
+            category: 'Capital Repair / Inclusivity',
+            title: 'Entrance Group Renovation — Skvyra PHCC',
+            description: 'Major repair of the entrance group of Skvyra Primary Health Care Center on Kyivska St., 12. Ramp installation using the existing gradient, tactile navigation strips, new ceramic flooring and lowered curb for barrier-free access.',
+            location: 'Skvyra, Kyiv region',
+            backgroundImage: '/assets/images/skvyra-clinic/Image1.png',
+            gallery: [
+                '/assets/images/skvyra-clinic/Image1.png',
+                '/assets/images/skvyra-clinic/Image2.png',
+                '/assets/images/skvyra-clinic/Image3.png',
+                '/assets/images/skvyra-clinic/Image4.png',
+                '/assets/images/skvyra-clinic/Image5.png',
+                '/assets/images/skvyra-clinic/Image6.png',
+            ]
+        },
+        {
+            id: 12,
+            category: 'Technical Supervision',
+            title: 'Road Construction Supervision',
+            description: 'Technical supervision of road construction and repair in Obukhiv, Ukrainka, Rzhyshchiv, Vatutine and regional villages.',
+            location: 'Kyiv and Cherkasy regions',
+            backgroundImage: '/assets/images/naglad/naglad.jpeg',
+            gallery: [
+                '/assets/images/naglad/naglad.jpeg',
+                '/assets/images/naglad/road-01.jpeg',
+                '/assets/images/naglad/road-02.jpeg',
+                '/assets/images/naglad/road-03.jpeg',
+                '/assets/images/naglad/road-04.jpeg',
+                '/assets/images/naglad/road-05.jpeg',
+                '/assets/images/naglad/road-06.jpeg',
+            ]
+        },
+        {
+            id: 7,
+            category: 'Bridge Structures',
+            title: 'Bridge over Hnylopiat River',
+            description: 'Major repair of the bridge and approaches to it on Rynkova St.',
+            location: 'Berdychiv, Zhytomyr region',
+            backgroundImage: '/assets/images/berdychiv-bridge/bridge.jpg'
+        },
+        {
             id: 3,
             category: 'Traffic Organization',
             title: 'Community Traffic Scheme (Bila Tserkva)',
             description: 'Comprehensive development and approval of a traffic organization scheme for the urban territorial community.',
             location: 'Bila Tserkva, Kyiv region',
-            backgroundImage: '/assets/images/bila/bila.jpeg'
+            backgroundImage: '/assets/images/bila/bila.jpg'
         },
         {
             id: 4,
@@ -188,7 +280,8 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Access Roads to M-01',
             description: 'Construction of access roads and junction to the M-01 state highway (Kyiv – Chernihiv).',
             location: 'Kyiv region (M-01 highway)',
-            backgroundImage: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2069&auto=format&fit=crop'
+            backgroundImage: planM01Img,
+            gallery: [planM01Img, planM01Img2]
         },
         {
             id: 5,
@@ -212,14 +305,6 @@ export const PROJECTS_IMMERSIVE = {
             ]
         },
         {
-            id: 7,
-            category: 'Bridge Structures',
-            title: 'Bridge over Hnylopiat River',
-            description: 'Major repair of the bridge and approaches to it on Rynkova St.',
-            location: 'Berdychiv, Zhytomyr region',
-            backgroundImage: 'https://images.unsplash.com/photo-1545893835-abaa50cbe628?q=80&w=2070&auto=format&fit=crop'
-        },
-        {
             id: 8,
             category: 'Engineering Networks / Heating',
             title: 'Heating System Overhaul (BMK-500)',
@@ -227,7 +312,6 @@ export const PROJECTS_IMMERSIVE = {
             location: 'Yurkivka, Cherkasy region',
             backgroundImage: 'https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?q=80&w=2070&auto=format&fit=crop'
         },
-
         {
             id: 10,
             category: 'Building Renovation / Roofing',
@@ -243,14 +327,6 @@ export const PROJECTS_IMMERSIVE = {
             description: 'Consulting Engineer services at major repair sites of simple shelters in preschool education institutions (Kindergartens No. 24, 41, 32).',
             location: 'Kyiv, Holosiivskyi district',
             backgroundImage: 'https://images.unsplash.com/photo-1590579491624-f98f36d4c763?q=80&w=2000&auto=format&fit=crop'
-        },
-        {
-            id: 12,
-            category: 'Technical Supervision',
-            title: 'Road Construction Supervision',
-            description: 'Technical supervision of road construction and repair in Obukhiv, Ukrainka, Rzhyshchiv, Vatutine and regional villages.',
-            location: 'Kyiv and Cherkasy regions',
-            backgroundImage: '/assets/images/naglad/naglad.jpeg'
         },
         {
             id: 13,
