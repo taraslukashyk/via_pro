@@ -75,6 +75,18 @@ export const PROJECTS = {
             lng: 26.6110
         },
         {
+            id: 8,
+            title: 'Капітальний ремонт системи опалення (БМК-500)',
+            location: 'с. Юрківка, Черкаська обл.',
+            year: '2025',
+            budget: 'В роботі',
+            category: 'Інженерні мережі',
+            description: 'Влаштування блочно-модульної котельні типу БМК-500 в Юрківській гімназії. Забезпечено енергоефективне опалення навчального закладу.',
+            image: '/assets/images/kotelna/bmk500_1.webp',
+            lat: 49.0069,
+            lng: 31.0856
+        },
+        {
             id: 6,
             title: 'Схема руху центру міста (м. Сквира)',
             location: 'м. Сквира, Київська обл.',
@@ -97,18 +109,6 @@ export const PROJECTS = {
             image: '/assets/images/berdychiv-bridge/bridge.jpg',
             lat: 49.8919,
             lng: 28.5866
-        },
-        {
-            id: 8,
-            title: 'Капітальний ремонт системи опалення (БМК-500)',
-            location: 'с. Юрківка, Черкаська обл.',
-            year: '2025',
-            budget: 'В роботі',
-            category: 'Інженерні мережі',
-            description: 'Влаштування блочно-модульної котельні типу БМК-500 в Юрківській гімназії. Забезпечено енергоефективне опалення навчального закладу.',
-            image: 'https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?q=80&w=2070&auto=format&fit=crop', // Placeholder: boiler room/pipes
-            lat: 49.0069,
-            lng: 31.0856
         },
         {
             id: 10,
@@ -233,6 +233,18 @@ export const PROJECTS = {
             lng: 26.6110
         },
         {
+            id: 8,
+            title: 'Heating System Overhaul (BMK-500)',
+            location: 'Yurkivka, Cherkasy region',
+            year: '2025',
+            budget: 'In Progress',
+            category: 'Engineering Networks',
+            description: 'Installation of a block-modular boiler house type BMK-500 in Yurkivka Gymnasium. Provided energy-efficient heating for the educational institution.',
+            image: '/assets/images/kotelna/bmk500_1.webp',
+            lat: 49.0069,
+            lng: 31.0856
+        },
+        {
             id: 6,
             title: 'City Center Traffic Scheme (Skvyra)',
             location: 'Skvyra, Kyiv region',
@@ -255,18 +267,6 @@ export const PROJECTS = {
             image: '/assets/images/berdychiv-bridge/bridge.jpg',
             lat: 49.8919,
             lng: 28.5866
-        },
-        {
-            id: 8,
-            title: 'Heating System Overhaul (BMK-500)',
-            location: 'Yurkivka, Cherkasy region',
-            year: '2025',
-            budget: 'In Progress',
-            category: 'Engineering Networks',
-            description: 'Installation of a block-modular boiler house type BMK-500 in Yurkivka Gymnasium. Provided energy-efficient heating for the educational institution.',
-            image: 'https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?q=80&w=2070&auto=format&fit=crop',
-            lat: 49.0069,
-            lng: 31.0856
         },
         {
             id: 10,

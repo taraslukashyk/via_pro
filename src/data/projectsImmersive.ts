@@ -92,6 +92,18 @@ export const PROJECTS_IMMERSIVE = {
             ]
         },
         {
+            id: 8,
+            category: 'Інженерні мережі / Теплопостачання',
+            title: 'Капітальний ремонт системи опалення (БМК-500)',
+            description: 'Влаштування блочно-модульної котельні типу БМК-500 в Юрківській гімназії. Забезпечено енергоефективне опалення навчального закладу.',
+            location: 'с. Юрківка, Черкаська обл.',
+            backgroundImage: '/assets/images/kotelna/bmk500_1.webp',
+            gallery: [
+                '/assets/images/kotelna/bmk500_1.webp',
+                '/assets/images/kotelna/bmk500_2.webp'
+            ]
+        },
+        {
             id: 7,
             category: 'Мостові споруди',
             title: 'Міст через р. Гнилоп\'ять',
@@ -136,14 +148,6 @@ export const PROJECTS_IMMERSIVE = {
                 '/assets/images/skvyra/Image2.webp',
                 '/assets/images/skvyra/Image3.webp',
             ]
-        },
-        {
-            id: 8,
-            category: 'Інженерні мережі / Теплопостачання',
-            title: 'Капітальний ремонт системи опалення (БМК-500)',
-            description: 'Влаштування блочно-модульної котельні типу БМК-500 в Юрківській гімназії. Забезпечено енергоефективне опалення навчального закладу.',
-            location: 'с. Юрківка, Черкаська обл.',
-            backgroundImage: 'https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?q=80&w=2070&auto=format&fit=crop'
         },
         {
             id: 10,
@@ -259,6 +263,18 @@ export const PROJECTS_IMMERSIVE = {
             ]
         },
         {
+            id: 8,
+            category: 'Engineering Networks / Heating',
+            title: 'Heating System Overhaul (BMK-500)',
+            description: 'Installation of a block-modular boiler house type BMK-500 in Yurkivka Gymnasium. Provided energy-efficient heating for the educational institution.',
+            location: 'Yurkivka, Cherkasy region',
+            backgroundImage: '/assets/images/kotelna/bmk500_1.webp',
+            gallery: [
+                '/assets/images/kotelna/bmk500_1.webp',
+                '/assets/images/kotelna/bmk500_2.webp'
+            ]
+        },
+        {
             id: 7,
             category: 'Bridge Structures',
             title: 'Bridge over Hnylopiat River',
@@ -303,14 +319,6 @@ export const PROJECTS_IMMERSIVE = {
                 '/assets/images/skvyra/Image2.webp',
                 '/assets/images/skvyra/Image3.webp',
             ]
-        },
-        {
-            id: 8,
-            category: 'Engineering Networks / Heating',
-            title: 'Heating System Overhaul (BMK-500)',
-            description: 'Installation of a block-modular boiler house type BMK-500 in Yurkivka Gymnasium. Provided energy-efficient heating for the educational institution.',
-            location: 'Yurkivka, Cherkasy region',
-            backgroundImage: 'https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?q=80&w=2070&auto=format&fit=crop'
         },
         {
             id: 10,
