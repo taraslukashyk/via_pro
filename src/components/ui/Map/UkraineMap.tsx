@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { UKRAINE_REGIONS } from '../../../data/mapPaths';
 import { getRegionStats, getStatsRange, type RegionStats } from '../../../data/regionStats';
 import { RegionTooltip } from './RegionTooltip';
@@ -31,7 +31,8 @@ export const UkraineMap: React.FC = () => {
     }, [min, max]);
 
     // Обробник наведення на область (десктоп)
-    const handleMouseEnter = useCallback((e: React.MouseEvent<SVGPathElement>, regionId: number) => {
+    const handlePointerEnter = useCallback((e: React.PointerEvent<SVGPathElement>, regionId: number) => {
+        if (e.pointerType !== 'mouse') return; // Ігноруємо touch події, щоб уникнути конфліктів на iOS
         const stats = getRegionStats(regionId);
         if (stats) {
             setHoveredRegion(stats);
@@ -46,7 +47,8 @@ export const UkraineMap: React.FC = () => {
     }, []);
 
     // Обробник руху миші для оновлення позиції tooltip
-    const handleMouseMove = useCallback((e: React.MouseEvent<SVGPathElement>) => {
+    const handlePointerMove = useCallback((e: React.PointerEvent<SVGPathElement>) => {
+        if (e.pointerType !== 'mouse') return;
         const svgRect = e.currentTarget.ownerSVGElement?.getBoundingClientRect();
         if (svgRect && hoveredRegion) {
             setTooltipPosition({
@@ -57,12 +59,15 @@ export const UkraineMap: React.FC = () => {
     }, [hoveredRegion]);
 
     // Обробник виходу з області
-    const handleMouseLeave = useCallback(() => {
+    const handlePointerLeave = useCallback((e: React.PointerEvent<SVGPathElement>) => {
+        if (e.pointerType !== 'mouse') return;
         setHoveredRegion(null);
     }, []);
 
     // Обробник кліку/тачу для мобільних — toggle tooltip
     const handleClick = useCallback((e: React.MouseEvent<SVGPathElement>, regionId: number) => {
+        e.stopPropagation(); // Запобігаємо закриттю при кліці на саму область
+
         const stats = getRegionStats(regionId);
         if (!stats) return;
 
@@ -80,6 +85,17 @@ export const UkraineMap: React.FC = () => {
             }
         }
     }, [hoveredRegion]);
+
+    // Закриваємо тултип при кліці поза картою (корисно для мобільних)
+    useEffect(() => {
+        const handleDocumentClick = () => {
+            setHoveredRegion(null);
+        };
+        document.addEventListener('click', handleDocumentClick);
+        return () => {
+            document.removeEventListener('click', handleDocumentClick);
+        };
+    }, []);
 
     return (
         <div className="w-full h-full relative" ref={containerRef}>
@@ -100,14 +116,15 @@ export const UkraineMap: React.FC = () => {
                             d={region.d}
                             data-name={region.name}
                             fill={getRegionColor(region.id)}
+                            data-hovered={hoveredRegion?.id === region.id}
                             className={`
                                 stroke-foreground/10 stroke-[1.5] 
                                 transition-all duration-300 ease-out
-                                ${hasData ? 'cursor-pointer hover:stroke-accent/70 hover:brightness-110' : 'cursor-default'}
+                                ${hasData ? 'cursor-pointer md:hover:stroke-accent/70 md:hover:brightness-110 data-[hovered=true]:stroke-accent/70 data-[hovered=true]:brightness-110' : 'cursor-default'}
                             `}
-                            onMouseEnter={(e) => handleMouseEnter(e, region.id)}
-                            onMouseMove={handleMouseMove}
-                            onMouseLeave={handleMouseLeave}
+                            onPointerEnter={(e) => handlePointerEnter(e, region.id)}
+                            onPointerMove={handlePointerMove}
+                            onPointerLeave={handlePointerLeave}
                             onClick={(e) => handleClick(e, region.id)}
                         />
                     );
