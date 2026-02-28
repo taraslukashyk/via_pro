@@ -110,18 +110,7 @@ export const PROJECTS = {
             lat: 49.8919,
             lng: 28.5866
         },
-        {
-            id: 10,
-            title: 'Ремонт покрівлі (Київський коледж)',
-            location: 'м. Київ (вул. Архітектора Кобелєва)',
-            year: '2025',
-            budget: 'В роботі',
-            category: 'Капітальний ремонт будівель',
-            description: 'Капітальний ремонт покрівлі в учбово-виробничих майстернях Київського професійного коледжу залізничного транспорту. Забезпечено захист будівлі та комфортні умови для навчання.',
-            image: 'https://images.unsplash.com/photo-1629813134638-72122b513361?q=80&w=2070&auto=format&fit=crop', // Placeholder: roof repair/construction
-            lat: 50.4386,
-            lng: 30.4872
-        },
+
         {
             id: 11,
             title: 'Консультаційні послуги (Укриття ЗДО)',
@@ -130,7 +119,7 @@ export const PROJECTS = {
             budget: 'В роботі',
             category: 'Консалтинг / Укриття',
             description: 'Послуги Інженера-консультанта на об\'єктах капітального ремонту найпростіших укриттів у закладах дошкільної освіти (ЗДО №24, №41, №32). Контроль якості та відповідності нормам безпеки.',
-            image: 'https://images.unsplash.com/photo-1590579491624-f98f36d4c763?q=80&w=2000&auto=format&fit=crop', // Placeholder: shelter/basement
+            image: '/assets/images/konsultant/kons_1.webp', // Placeholder: shelter/basement
             lat: 50.4000,
             lng: 30.5100
         },
@@ -154,7 +143,7 @@ export const PROJECTS = {
             budget: 'В роботі',
             category: 'Цивільний захист',
             description: 'Технічний нагляд за капітальним ремонтом захисної споруди цивільного захисту в закладі дошкільної освіти №305. Створення безпечного середовища для дітей.',
-            image: 'https://images.unsplash.com/photo-1517088927909-5a109a976a47?q=80&w=2070&auto=format&fit=crop', // Placeholder: renovation indoors
+            image: '/assets/images/ukrytia/ukrytia.webp',
             lat: 50.4200,
             lng: 30.6800
         }
@@ -268,18 +257,7 @@ export const PROJECTS = {
             lat: 49.8919,
             lng: 28.5866
         },
-        {
-            id: 10,
-            title: 'Roof Repair (Kyiv College)',
-            location: 'Kyiv (Kobelev St.)',
-            year: '2025',
-            budget: 'In Progress',
-            category: 'Building Renovation',
-            description: 'Major roof repair in the training workshops of the Kyiv Professional College of Railway Transport. Provided building protection and comfortable conditions for learning.',
-            image: 'https://images.unsplash.com/photo-1629813134638-72122b513361?q=80&w=2070&auto=format&fit=crop',
-            lat: 50.4386,
-            lng: 30.4872
-        },
+
         {
             id: 11,
             title: 'Consulting Services (Shelters)',
@@ -288,7 +266,7 @@ export const PROJECTS = {
             budget: 'In Progress',
             category: 'Consulting / Shelters',
             description: 'Consulting Engineer services at major repair sites of simple shelters in preschool education institutions (Kindergartens No. 24, 41, 32). Quality control and compliance with safety standards.',
-            image: 'https://images.unsplash.com/photo-1590579491624-f98f36d4c763?q=80&w=2000&auto=format&fit=crop',
+            image: '/assets/images/konsultant/kons_1.webp',
             lat: 50.4000,
             lng: 30.5100
         },
@@ -312,7 +290,7 @@ export const PROJECTS = {
             budget: 'In Progress',
             category: 'Civil Protection',
             description: 'Technical supervision of the major repair of a civil protection structure in Preschool Education Institution No. 305. Creating a safe environment for children.',
-            image: 'https://images.unsplash.com/photo-1517088927909-5a109a976a47?q=80&w=2070&auto=format&fit=crop',
+            image: '/assets/images/ukrytia/ukrytia.webp',
             lat: 50.4200,
             lng: 30.6800
         }

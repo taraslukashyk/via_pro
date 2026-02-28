@@ -149,21 +149,14 @@ export const PROJECTS_IMMERSIVE = {
                 '/assets/images/skvyra/Image3.webp',
             ]
         },
-        {
-            id: 10,
-            category: 'Капітальний ремонт будівель',
-            title: 'Ремонт покрівлі (Київський коледж)',
-            description: 'Капітальний ремонт покрівлі в учбово-виробничих майстернях Київського професійного коледжу залізничного транспорту.',
-            location: 'м. Київ (вул. Архітектора Кобелєва)',
-            backgroundImage: 'https://images.unsplash.com/photo-1629813134638-72122b513361?q=80&w=2070&auto=format&fit=crop'
-        },
+
         {
             id: 11,
             category: 'Консалтинг / Укриття',
             title: 'Консультаційні послуги (Укриття ЗДО)',
             description: 'Послуги Інженера-консультанта на об\'єктах капітального ремонту найпростіших укриттів у закладах дошкільної освіти (ЗДО №24, №41, №32).',
             location: 'м. Київ, Голосіївський район',
-            backgroundImage: 'https://images.unsplash.com/photo-1590579491624-f98f36d4c763?q=80&w=2000&auto=format&fit=crop'
+            backgroundImage: '/assets/images/konsultant/kons_1.webp'
         },
         {
             id: 13,
@@ -171,7 +164,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Капітальний ремонт укриття (ЗДО №305)',
             description: 'Технічний нагляд за капітальним ремонтом захисної споруди цивільного захисту в закладі дошкільної освіти №305.',
             location: 'м. Київ (вул. Ліснича)',
-            backgroundImage: 'https://images.unsplash.com/photo-1517088927909-5a109a976a47?q=80&w=2070&auto=format&fit=crop'
+            backgroundImage: '/assets/images/ukrytia/ukrytia.webp'
         },
     ],
     en: [
@@ -320,21 +313,14 @@ export const PROJECTS_IMMERSIVE = {
                 '/assets/images/skvyra/Image3.webp',
             ]
         },
-        {
-            id: 10,
-            category: 'Building Renovation / Roofing',
-            title: 'Roof Repair (Kyiv College)',
-            description: 'Major roof repair in the training workshops of the Kyiv Professional College of Railway Transport.',
-            location: 'Kyiv (Kobelev St.)',
-            backgroundImage: 'https://images.unsplash.com/photo-1629813134638-72122b513361?q=80&w=2070&auto=format&fit=crop'
-        },
+
         {
             id: 11,
             category: 'Consulting / Shelters',
             title: 'Consulting Services (Shelters)',
             description: 'Consulting Engineer services at major repair sites of simple shelters in preschool education institutions (Kindergartens No. 24, 41, 32).',
             location: 'Kyiv, Holosiivskyi district',
-            backgroundImage: 'https://images.unsplash.com/photo-1590579491624-f98f36d4c763?q=80&w=2000&auto=format&fit=crop'
+            backgroundImage: '/assets/images/konsultant/kons_1.webp'
         },
         {
             id: 13,
@@ -342,7 +328,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Shelter Renovation (Kindergarten No. 305)',
             description: 'Technical supervision of the major repair of a civil protection structure in Preschool Education Institution No. 305.',
             location: 'Kyiv (Lisnycha St.)',
-            backgroundImage: 'https://images.unsplash.com/photo-1517088927909-5a109a976a47?q=80&w=2070&auto=format&fit=crop'
+            backgroundImage: '/assets/images/ukrytia/ukrytia.webp'
         }
     ]
 };

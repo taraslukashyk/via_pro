@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '../ui/Button';
 import logo from '../../assets/logo.png';
-import { TelegramIcon, WhatsAppIcon, YouTubeIcon } from '../ui/SocialIcons';
+import { TelegramIcon, WhatsAppIcon } from '../ui/SocialIcons';
 import { LanguageSwitcher } from '../ui/LanguageSwitcher';
 import { useTranslation } from '../../translations';
 
@@ -129,7 +129,6 @@ export const Header: React.FC<HeaderProps> = ({ isOverlay = false }) => {
                             <LanguageSwitcher isOverlay={isOverlay} />
                             <a href="https://t.me/me_ppo" target="_blank" rel="noopener noreferrer" className={`${socialIconClass} transition-colors hover:scale-110 duration-300`}><TelegramIcon className="w-5 h-5" /></a>
                             <a href="https://wa.me/380634535983" target="_blank" rel="noopener noreferrer" className={`${socialIconClass} transition-colors hover:scale-110 duration-300`}><WhatsAppIcon className="w-5 h-5" /></a>
-                            <a href="https://www.youtube.com/@taraslukashyk" target="_blank" rel="noopener noreferrer" className={`${isOverlay ? 'text-white/60 hover:text-red-400' : 'text-foreground/60 hover:text-red-500'} transition-colors hover:scale-110 duration-300`}><YouTubeIcon className="w-5 h-5" /></a>
                         </div>
 
                         {/* Mobile Menu Toggle */}
