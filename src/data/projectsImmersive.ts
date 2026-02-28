@@ -1,6 +1,6 @@
 // Дані для immersive секції проєктів з фоновими зображеннями
-import planM01Img from '../assets/images/plan_m01.jpg';
-import planM01Img2 from '../assets/images/plan_m01_2.jpg';
+import planM01Img from '../assets/images/plan_m01.webp';
+import planM01Img2 from '../assets/images/plan_m01_2.webp';
 
 export const PROJECTS_IMMERSIVE = {
     uk: [
@@ -10,15 +10,15 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Кільцева розв\'язка (м. Вишневе)',
             description: 'Влаштування транспортної розв\'язки кільцевого типу на перехресті вул. Лесі Українки та вул. Паркова.',
             location: 'м. Вишневе, Київська обл.',
-            backgroundImage: '/assets/images/visneve-ring/visneve-ring.png',
+            backgroundImage: '/assets/images/visneve-ring/visneve-ring.webp',
             gallery: [
-                '/assets/images/visneve-ring/visneve-ring.png',
-                '/assets/images/visneve-ring/Image2.png',
-                '/assets/images/visneve-ring/Image3.png',
-                '/assets/images/visneve-ring/Image4.png',
-                '/assets/images/visneve-ring/Image5.png',
-                '/assets/images/visneve-ring/Image6.png',
-                '/assets/images/visneve-ring/Image7.png',
+                '/assets/images/visneve-ring/visneve-ring.webp',
+                '/assets/images/visneve-ring/Image2.webp',
+                '/assets/images/visneve-ring/Image3.webp',
+                '/assets/images/visneve-ring/Image4.webp',
+                '/assets/images/visneve-ring/Image5.webp',
+                '/assets/images/visneve-ring/Image6.webp',
+                '/assets/images/visneve-ring/Image7.webp',
             ]
         },
         {
@@ -27,14 +27,14 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Тротуари та паркування (м. Вишневе)',
             description: 'Капітальний ремонт тротуару по вул. Київська з влаштуванням заїзних кишень для громадського транспорту та автостоянок.',
             location: 'м. Вишневе, Київська обл.',
-            backgroundImage: '/assets/images/visneve-walk/visneve-walk.png',
+            backgroundImage: '/assets/images/visneve-walk/visneve-walk.webp',
             gallery: [
-                '/assets/images/visneve-walk/visneve-walk.png',
-                '/assets/images/visneve-walk/Image1.png',
-                '/assets/images/visneve-walk/Image2.png',
-                '/assets/images/visneve-walk/Image3.png',
-                '/assets/images/visneve-walk/Image4.png',
-                '/assets/images/visneve-walk/Image6.png',
+                '/assets/images/visneve-walk/visneve-walk.webp',
+                '/assets/images/visneve-walk/Image1.webp',
+                '/assets/images/visneve-walk/Image2.webp',
+                '/assets/images/visneve-walk/Image3.webp',
+                '/assets/images/visneve-walk/Image4.webp',
+                '/assets/images/visneve-walk/Image6.webp',
             ]
         },
         {
@@ -43,7 +43,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Реконструкція електропостачання',
             description: 'Реконструкція системи електропостачання котельні з влаштуванням точки підключення когенераційної установки в м. Ватутіне.',
             location: 'м. Ватутіне, Черкаська обл.',
-            backgroundImage: '/assets/images/vatutine-electro/vatutine-electro-new.jpeg'
+            backgroundImage: '/assets/images/vatutine-electro/vatutine-electro-new.webp'
         },
         {
             id: 14,
@@ -51,11 +51,11 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Капітальний ремонт вхідної групи (пандус)',
             description: 'Капітальний ремонт вхідної групи нежитлової будівлі по вул. М. Рильського у м. Сквира. Влаштування нормативного пандусу та сходів з монолітного залізобетону, тактильна навігація, безбар\'єрне середовище для МГН.',
             location: 'м. Сквира, Київська обл.',
-            backgroundImage: '/assets/images/skvyra-pandus/Image1.png',
+            backgroundImage: '/assets/images/skvyra-pandus/Image1.webp',
             gallery: [
-                '/assets/images/skvyra-pandus/Image1.png',
-                '/assets/images/skvyra-pandus/Image2.png',
-                '/assets/images/skvyra-pandus/Image3.png',
+                '/assets/images/skvyra-pandus/Image1.webp',
+                '/assets/images/skvyra-pandus/Image2.webp',
+                '/assets/images/skvyra-pandus/Image3.webp',
             ]
         },
         {
@@ -64,14 +64,14 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Кап.ремонт вхідної групи ЦПМСД м. Сквира',
             description: 'Капітальний ремонт вхідної групи Сквирського міського центру первинної медико-санітарної допомоги через влаштування пандусу, тактильних смуг та нового покриття. Безбар\'єрний доступ згідно ДБН В.2.2-40:2018.',
             location: 'м. Сквира, Київська обл.',
-            backgroundImage: '/assets/images/skvyra-clinic/Image1.png',
+            backgroundImage: '/assets/images/skvyra-clinic/Image1.webp',
             gallery: [
-                '/assets/images/skvyra-clinic/Image1.png',
-                '/assets/images/skvyra-clinic/Image2.png',
-                '/assets/images/skvyra-clinic/Image3.png',
-                '/assets/images/skvyra-clinic/Image4.png',
-                '/assets/images/skvyra-clinic/Image5.png',
-                '/assets/images/skvyra-clinic/Image6.png',
+                '/assets/images/skvyra-clinic/Image1.webp',
+                '/assets/images/skvyra-clinic/Image2.webp',
+                '/assets/images/skvyra-clinic/Image3.webp',
+                '/assets/images/skvyra-clinic/Image4.webp',
+                '/assets/images/skvyra-clinic/Image5.webp',
+                '/assets/images/skvyra-clinic/Image6.webp',
             ]
         },
         {
@@ -80,15 +80,15 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Технічний нагляд за дорогами',
             description: 'Технічний нагляд за будівництвом та ремонтом доріг у м. Обухів, Українка, Ржищів, Ватутіне та селах регіонів.',
             location: 'Київська та Черкаська області',
-            backgroundImage: '/assets/images/naglad/naglad.jpeg',
+            backgroundImage: '/assets/images/naglad/naglad.webp',
             gallery: [
-                '/assets/images/naglad/naglad.jpeg',
-                '/assets/images/naglad/road-01.jpeg',
-                '/assets/images/naglad/road-02.jpeg',
-                '/assets/images/naglad/road-03.jpeg',
-                '/assets/images/naglad/road-04.jpeg',
-                '/assets/images/naglad/road-05.jpeg',
-                '/assets/images/naglad/road-06.jpeg',
+                '/assets/images/naglad/naglad.webp',
+                '/assets/images/naglad/road-01.webp',
+                '/assets/images/naglad/road-02.webp',
+                '/assets/images/naglad/road-03.webp',
+                '/assets/images/naglad/road-04.webp',
+                '/assets/images/naglad/road-05.webp',
+                '/assets/images/naglad/road-06.webp',
             ]
         },
         {
@@ -97,7 +97,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Міст через р. Гнилоп\'ять',
             description: 'Капітальний ремонт мосту та підходів до нього по вул. Ринковій.',
             location: 'м. Бердичів, Житомирська обл.',
-            backgroundImage: '/assets/images/berdychiv-bridge/bridge.jpg'
+            backgroundImage: '/assets/images/berdychiv-bridge/bridge.webp'
         },
         {
             id: 3,
@@ -105,7 +105,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Схема ОДР громади (м. Біла Церква)',
             description: 'Комплексна розробка та погодження схеми організації дорожнього руху на території міської територіальної громади.',
             location: 'м. Біла Церква, Київська обл.',
-            backgroundImage: '/assets/images/bila/bila.jpg'
+            backgroundImage: '/assets/images/bila/bila.webp'
         },
         {
             id: 4,
@@ -122,7 +122,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Реконструкція АЗС у селі Кам\'янка',
             description: 'Розробка організації дорожнього руху в рамках реконструкції автозаправної станції.',
             location: 'с. Кам\'янка, Хмельницька обл.',
-            backgroundImage: '/assets/images/kamianka/kamianka-azs.jpg'
+            backgroundImage: '/assets/images/kamianka/kamianka-azs.webp'
         },
         {
             id: 6,
@@ -130,11 +130,11 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Схема руху центру міста (м. Сквира)',
             description: 'Розроблення схеми організації дорожнього руху для вулиць і провулків центральної частини міста.',
             location: 'м. Сквира, Київська обл.',
-            backgroundImage: '/assets/images/skvyra/Image1.jpg',
+            backgroundImage: '/assets/images/skvyra/Image1.webp',
             gallery: [
-                '/assets/images/skvyra/Image1.jpg',
-                '/assets/images/skvyra/Image2.jpg',
-                '/assets/images/skvyra/Image3.jpg',
+                '/assets/images/skvyra/Image1.webp',
+                '/assets/images/skvyra/Image2.webp',
+                '/assets/images/skvyra/Image3.webp',
             ]
         },
         {
@@ -177,15 +177,15 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Roundabout (Vyshneve)',
             description: 'Construction of a circular-type traffic interchange at the intersection of Lesia Ukrainka St. and Parkova St.',
             location: 'Vyshneve, Kyiv region',
-            backgroundImage: '/assets/images/visneve-ring/visneve-ring.png',
+            backgroundImage: '/assets/images/visneve-ring/visneve-ring.webp',
             gallery: [
-                '/assets/images/visneve-ring/visneve-ring.png',
-                '/assets/images/visneve-ring/Image2.png',
-                '/assets/images/visneve-ring/Image3.png',
-                '/assets/images/visneve-ring/Image4.png',
-                '/assets/images/visneve-ring/Image5.png',
-                '/assets/images/visneve-ring/Image6.png',
-                '/assets/images/visneve-ring/Image7.png',
+                '/assets/images/visneve-ring/visneve-ring.webp',
+                '/assets/images/visneve-ring/Image2.webp',
+                '/assets/images/visneve-ring/Image3.webp',
+                '/assets/images/visneve-ring/Image4.webp',
+                '/assets/images/visneve-ring/Image5.webp',
+                '/assets/images/visneve-ring/Image6.webp',
+                '/assets/images/visneve-ring/Image7.webp',
             ]
         },
         {
@@ -194,14 +194,14 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Sidewalks and Parking (Vyshneve)',
             description: 'Major repair of the sidewalk on Kyivska St. with the construction of bus bays and parking lots.',
             location: 'Vyshneve, Kyiv region',
-            backgroundImage: '/assets/images/visneve-walk/visneve-walk.png',
+            backgroundImage: '/assets/images/visneve-walk/visneve-walk.webp',
             gallery: [
-                '/assets/images/visneve-walk/visneve-walk.png',
-                '/assets/images/visneve-walk/Image1.png',
-                '/assets/images/visneve-walk/Image2.png',
-                '/assets/images/visneve-walk/Image3.png',
-                '/assets/images/visneve-walk/Image4.png',
-                '/assets/images/visneve-walk/Image6.png',
+                '/assets/images/visneve-walk/visneve-walk.webp',
+                '/assets/images/visneve-walk/Image1.webp',
+                '/assets/images/visneve-walk/Image2.webp',
+                '/assets/images/visneve-walk/Image3.webp',
+                '/assets/images/visneve-walk/Image4.webp',
+                '/assets/images/visneve-walk/Image6.webp',
             ]
         },
         {
@@ -210,7 +210,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Power Supply Reconstruction',
             description: 'Reconstruction of the boiler house power supply system with the installation of a cogeneration unit connection point.',
             location: 'Vatutine, Cherkasy region',
-            backgroundImage: '/assets/images/vatutine-electro/vatutine-electro-new.jpeg'
+            backgroundImage: '/assets/images/vatutine-electro/vatutine-electro-new.webp'
         },
         {
             id: 14,
@@ -218,11 +218,11 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Entrance Group Renovation (Ramp)',
             description: 'Major repair of the entrance group of a non-residential building on M. Rylsky St. in Skvyra. Construction of a normative ramp and stairs from reinforced concrete, tactile navigation, and barrier-free access for people with disabilities.',
             location: 'Skvyra, Kyiv region',
-            backgroundImage: '/assets/images/skvyra-pandus/Image1.png',
+            backgroundImage: '/assets/images/skvyra-pandus/Image1.webp',
             gallery: [
-                '/assets/images/skvyra-pandus/Image1.png',
-                '/assets/images/skvyra-pandus/Image2.png',
-                '/assets/images/skvyra-pandus/Image3.png',
+                '/assets/images/skvyra-pandus/Image1.webp',
+                '/assets/images/skvyra-pandus/Image2.webp',
+                '/assets/images/skvyra-pandus/Image3.webp',
             ]
         },
         {
@@ -231,14 +231,14 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Entrance Group Renovation — Skvyra PHCC',
             description: 'Major repair of the entrance group of Skvyra Primary Health Care Center on Kyivska St., 12. Ramp installation using the existing gradient, tactile navigation strips, new ceramic flooring and lowered curb for barrier-free access.',
             location: 'Skvyra, Kyiv region',
-            backgroundImage: '/assets/images/skvyra-clinic/Image1.png',
+            backgroundImage: '/assets/images/skvyra-clinic/Image1.webp',
             gallery: [
-                '/assets/images/skvyra-clinic/Image1.png',
-                '/assets/images/skvyra-clinic/Image2.png',
-                '/assets/images/skvyra-clinic/Image3.png',
-                '/assets/images/skvyra-clinic/Image4.png',
-                '/assets/images/skvyra-clinic/Image5.png',
-                '/assets/images/skvyra-clinic/Image6.png',
+                '/assets/images/skvyra-clinic/Image1.webp',
+                '/assets/images/skvyra-clinic/Image2.webp',
+                '/assets/images/skvyra-clinic/Image3.webp',
+                '/assets/images/skvyra-clinic/Image4.webp',
+                '/assets/images/skvyra-clinic/Image5.webp',
+                '/assets/images/skvyra-clinic/Image6.webp',
             ]
         },
         {
@@ -247,15 +247,15 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Road Construction Supervision',
             description: 'Technical supervision of road construction and repair in Obukhiv, Ukrainka, Rzhyshchiv, Vatutine and regional villages.',
             location: 'Kyiv and Cherkasy regions',
-            backgroundImage: '/assets/images/naglad/naglad.jpeg',
+            backgroundImage: '/assets/images/naglad/naglad.webp',
             gallery: [
-                '/assets/images/naglad/naglad.jpeg',
-                '/assets/images/naglad/road-01.jpeg',
-                '/assets/images/naglad/road-02.jpeg',
-                '/assets/images/naglad/road-03.jpeg',
-                '/assets/images/naglad/road-04.jpeg',
-                '/assets/images/naglad/road-05.jpeg',
-                '/assets/images/naglad/road-06.jpeg',
+                '/assets/images/naglad/naglad.webp',
+                '/assets/images/naglad/road-01.webp',
+                '/assets/images/naglad/road-02.webp',
+                '/assets/images/naglad/road-03.webp',
+                '/assets/images/naglad/road-04.webp',
+                '/assets/images/naglad/road-05.webp',
+                '/assets/images/naglad/road-06.webp',
             ]
         },
         {
@@ -264,7 +264,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Bridge over Hnylopiat River',
             description: 'Major repair of the bridge and approaches to it on Rynkova St.',
             location: 'Berdychiv, Zhytomyr region',
-            backgroundImage: '/assets/images/berdychiv-bridge/bridge.jpg'
+            backgroundImage: '/assets/images/berdychiv-bridge/bridge.webp'
         },
         {
             id: 3,
@@ -272,7 +272,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Community Traffic Scheme (Bila Tserkva)',
             description: 'Comprehensive development and approval of a traffic organization scheme for the urban territorial community.',
             location: 'Bila Tserkva, Kyiv region',
-            backgroundImage: '/assets/images/bila/bila.jpg'
+            backgroundImage: '/assets/images/bila/bila.webp'
         },
         {
             id: 4,
@@ -289,7 +289,7 @@ export const PROJECTS_IMMERSIVE = {
             title: 'Gas Station Reconstruction (Kamianka)',
             description: 'Development of traffic organization as part of gas station reconstruction.',
             location: 'Kamianka, Khmelnytskyi region',
-            backgroundImage: '/assets/images/kamianka/kamianka-azs.jpg'
+            backgroundImage: '/assets/images/kamianka/kamianka-azs.webp'
         },
         {
             id: 6,
@@ -297,11 +297,11 @@ export const PROJECTS_IMMERSIVE = {
             title: 'City Center Traffic Scheme (Skvyra)',
             description: 'Development of a traffic organization scheme for streets and alleys in the central part of the city.',
             location: 'Skvyra, Kyiv region',
-            backgroundImage: '/assets/images/skvyra/Image1.jpg',
+            backgroundImage: '/assets/images/skvyra/Image1.webp',
             gallery: [
-                '/assets/images/skvyra/Image1.jpg',
-                '/assets/images/skvyra/Image2.jpg',
-                '/assets/images/skvyra/Image3.jpg',
+                '/assets/images/skvyra/Image1.webp',
+                '/assets/images/skvyra/Image2.webp',
+                '/assets/images/skvyra/Image3.webp',
             ]
         },
         {

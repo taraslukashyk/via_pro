@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -15,13 +15,32 @@ import { TelegramIcon, WhatsAppIcon } from '../components/ui/SocialIcons';
 import { Carousel } from '../components/ui/Carousel';
 import { InteractiveHeroBackground } from '../components/ui/InteractiveHeroBackground';
 import { TrustedByMarquee } from '../components/ui/TrustedByMarquee';
-import aboutImage from '../assets/images/VIA_PRO_about.jpg';
+import aboutImage from '../assets/images/VIA_PRO_about.webp';
 import { useTranslation } from '../translations';
 import { useLanguage } from '../contexts/LanguageContext';
+
+export const useImagePreloader = (imageUrls: string[]) => {
+    useEffect(() => {
+        // Ми чекаємо 3 секунди після того як сторінка Home провантажиться, щоб не забирати ресурси в початкового рендеру
+        const timer = setTimeout(() => {
+            imageUrls.forEach((url) => {
+                const img = new Image();
+                img.src = url;
+            });
+        }, 3000);
+
+        return () => clearTimeout(timer);
+    }, [imageUrls]);
+};
 
 const Home: React.FC = () => {
     const t = useTranslation();
     const { language } = useLanguage();
+
+    // Запускаємо фонове завантаження картинок для модалки проєктів
+    const projectImagesToPreload = PROJECTS_IMMERSIVE[language].map(p => p.backgroundImage);
+    useImagePreloader(projectImagesToPreload);
+
     const targetRef = useRef<HTMLDivElement>(null);
     const isHeroInView = useInView(targetRef, { margin: "-100px" });
     const { scrollYProgress } = useScroll({
@@ -189,6 +208,7 @@ const Home: React.FC = () => {
                                 <img
                                     src={project.backgroundImage}
                                     alt={project.title}
+                                    loading="lazy"
                                     className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
                                     draggable={false}
                                 />
