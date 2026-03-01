@@ -134,6 +134,37 @@ export const en: TranslationKeys = {
         partnersTitle: 'Partners who trust us with their projects',
     },
 
+    // Regions
+    regions: {
+        3136: 'Cherkasy Region',
+        3137: 'Chernihiv Region',
+        3138: 'Chernivtsi Region',
+        3139: 'Crimea',
+        3140: 'Dnipropetrovsk Region',
+        3141: 'Donetsk Region',
+        3142: 'Ivano-Frankivsk Region',
+        3143: 'Kharkiv Region',
+        3144: 'Kherson Region',
+        3145: 'Khmelnytskyi Region',
+        3146: 'Kyiv Region',
+        3147: 'Kyiv City',
+        3148: 'Kirovohrad Region',
+        3149: 'Luhansk Region',
+        3150: 'Lviv Region',
+        3151: 'Mykolaiv Region',
+        3152: 'Odesa Region',
+        3153: 'Poltava Region',
+        3154: 'Rivne Region',
+        3155: 'Sevastopol',
+        3156: 'Sumy Region',
+        3157: 'Ternopil Region',
+        3158: 'Zakarpattia Region',
+        3159: 'Vinnytsia Region',
+        3160: 'Volyn Region',
+        3161: 'Zaporizhzhia Region',
+        3162: 'Zhytomyr Region',
+    },
+
     // Common
     common: {
         contact: 'Contact',

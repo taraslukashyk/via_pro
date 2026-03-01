@@ -82,7 +82,7 @@ const TooltipContent: React.FC<TooltipContentProps> = ({ stats, t }) => (
     <div className="bg-background/95 backdrop-blur-sm border border-accent/20 rounded-xl shadow-2xl p-4 min-w-[220px]">
         {/* Заголовок — назва області */}
         <h3 className="text-lg font-bold text-foreground mb-3 border-b border-accent/10 pb-2">
-            {stats.name}
+            {t.regions && stats.id in t.regions ? t.regions[stats.id as keyof typeof t.regions] : stats.name}
         </h3>
 
         {/* Загальна кількість */}
