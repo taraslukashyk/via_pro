@@ -88,9 +88,18 @@ export const en: TranslationKeys = {
         readyText: 'Leave your contacts and we will contact you to discuss cooperation opportunities.',
         joinBtn: 'Join us',
         vacancyLabel: 'Open vacancy',
-        vacancyTitle: 'Highway Design Engineer / Traffic Management',
-        vacancyDescription: 'We are looking for a specialist to develop road infrastructure (detailed design) and traffic management plans. The work includes design, support and communication with clients.',
-        vacancyLocation: 'Irpin office / remote (part-time possible)',
+        vacancies: [
+            {
+                title: 'Geodesist Engineer',
+                description: 'We are looking for a qualified geodesist with higher education and experience to perform a full cycle of field and office work on infrastructure objects.\n\nMain tasks: measuring with modern equipment, data processing, quality control and coordination of surveys with network owners.\n\nWe offer: comfortable working conditions in a modern office and opportunities for professional growth in a stable team.',
+                location: 'Hybrid / In-office / On-site / Dual employment'
+            },
+            {
+                title: 'Highway Design Engineer / Traffic Management',
+                description: 'We are looking for a specialist to develop road infrastructure (detailed design) and traffic management plans. The work includes design, support and communication with clients.',
+                location: 'Irpin office / remote (part-time possible)'
+            }
+        ],
         applyBtn: 'Apply',
         vacancyQuote: '"Share your experience — let\'s build the future together"',
         modalHeading: 'Submit application',

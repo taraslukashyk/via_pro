@@ -9,12 +9,14 @@ import { useTranslation } from '../translations';
 const Career: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [phoneNumber, setPhoneNumber] = useState('');
+    const [selectedVacancy, setSelectedVacancy] = useState('');
     const t = useTranslation();
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         // Construct telegram message
-        const message = `Доброго дня! Я зацікавлений у вакансії ${t.career.vacancyTitle}. Мій номер: ${phoneNumber}`;
+        const vacancyText = selectedVacancy ? `вакансії ${selectedVacancy}` : 'працевлаштуванні';
+        const message = `Доброго дня! Я зацікавлений у ${vacancyText}. Мій номер: ${phoneNumber}`;
         const telegramUrl = `https://t.me/me_ppo?text=${encodeURIComponent(message)}`;
         window.open(telegramUrl, '_blank');
         setIsModalOpen(false);
@@ -46,7 +48,10 @@ const Career: React.FC = () => {
 
                             <Button
                                 className="bg-white text-foreground hover:bg-gray-200 text-lg px-10 py-6 rounded-full relative z-10"
-                                onClick={() => setIsModalOpen(true)}
+                                onClick={() => {
+                                    setSelectedVacancy('');
+                                    setIsModalOpen(true);
+                                }}
                             >
                                 {t.career.joinBtn}
                             </Button>
@@ -56,52 +61,59 @@ const Career: React.FC = () => {
             </Section>
 
             {/* VACANCY SECTION - Full Width Dark Glass Card */}
-            <Section className="py-24 flex items-center relative overflow-hidden px-0">
-                <div className="w-full relative z-10 px-4 md:px-8">
-                    <FadeIn>
-                        {/* Dark Glass Card - Full Width Styling */}
-                        <div className="relative overflow-hidden rounded-[2rem] bg-[#1a1a1a]/80 backdrop-blur-xl border border-white/10 shadow-2xl p-8 md:p-14 w-full mx-auto">
-                            {/* Glossy overlay effect */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
+            <Section className="py-24 relative overflow-hidden px-0">
+                <div className="flex flex-col items-center gap-16 md:gap-24 w-full">
+                    {t.career.vacancies.map((vacancy, index) => (
+                        <div className="w-full relative z-10 px-4 md:px-8" key={index}>
+                            <FadeIn delay={index * 0.1}>
+                                {/* Dark Glass Card - Full Width Styling */}
+                                <div className="relative overflow-hidden rounded-[2rem] bg-[#1a1a1a]/80 backdrop-blur-xl border border-white/10 shadow-2xl p-8 md:p-14 w-full mx-auto">
+                                    {/* Glossy overlay effect */}
+                                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
 
-                            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
-                                {/* Left Content */}
-                                <div className="space-y-6 text-left flex-1 w-full">
-                                    <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 text-white/40 text-[10px] tracking-[0.2em] uppercase font-bold">
-                                        {t.career.vacancyLabel}
-                                    </div>
+                                    <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
+                                        {/* Left Content */}
+                                        <div className="space-y-6 text-left flex-1 w-full">
+                                            <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 text-white/40 text-[10px] tracking-[0.2em] uppercase font-bold">
+                                                {t.career.vacancyLabel}
+                                            </div>
 
-                                    <div className="space-y-4">
-                                        <h3 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                                            {t.career.vacancyTitle}
-                                        </h3>
+                                            <div className="space-y-4">
+                                                <h3 className="text-3xl md:text-5xl lg:text-5xl font-bold text-white leading-tight">
+                                                    {vacancy.title}
+                                                </h3>
 
-                                        <p className="text-lg md:text-xl text-white/50 font-light leading-relaxed max-w-4xl">
-                                            {t.career.vacancyDescription}
-                                        </p>
-                                    </div>
+                                                <p className="text-lg md:text-xl text-white/50 font-light leading-relaxed max-w-4xl whitespace-pre-wrap">
+                                                    {vacancy.description}
+                                                </p>
+                                            </div>
 
-                                    <div className="flex items-center gap-2 text-white/30 text-sm pt-4">
-                                        <Landmark size={18} />
-                                        <span>{t.career.vacancyLocation}</span>
+                                            <div className="flex items-center gap-2 text-white/30 text-sm pt-4">
+                                                <Landmark size={18} />
+                                                <span>{vacancy.location}</span>
+                                            </div>
+                                        </div>
+
+                                        {/* Right Action */}
+                                        <div className="flex flex-col items-center md:items-end gap-8 flex-shrink-0 w-full md:w-auto">
+                                            <Button
+                                                className="bg-white text-black hover:bg-white/90 text-lg px-12 py-5 rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 w-full md:w-auto font-bold shadow-xl shadow-white/5"
+                                                onClick={() => {
+                                                    setSelectedVacancy(vacancy.title);
+                                                    setIsModalOpen(true);
+                                                }}
+                                            >
+                                                {t.career.applyBtn}
+                                            </Button>
+                                            <p className="text-white/20 text-sm italic font-light max-w-[280px] text-center md:text-right leading-relaxed">
+                                                {t.career.vacancyQuote}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-
-                                {/* Right Action */}
-                                <div className="flex flex-col items-center md:items-end gap-8 flex-shrink-0 w-full md:w-auto">
-                                    <Button
-                                        className="bg-white text-black hover:bg-white/90 text-lg px-12 py-5 rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 w-full md:w-auto font-bold shadow-xl shadow-white/5"
-                                        onClick={() => setIsModalOpen(true)}
-                                    >
-                                        {t.career.applyBtn}
-                                    </Button>
-                                    <p className="text-white/20 text-sm italic font-light max-w-[280px] text-center md:text-right leading-relaxed">
-                                        {t.career.vacancyQuote}
-                                    </p>
-                                </div>
-                            </div>
+                            </FadeIn>
                         </div>
-                    </FadeIn>
+                    ))}
                 </div>
             </Section>
 
