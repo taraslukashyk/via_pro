@@ -97,11 +97,11 @@ const Home: React.FC = () => {
             </section>
 
             {/* STATS SECTION */}
-            <Section className="bg-foreground text-background py-16 relative overflow-hidden">
+            <Section className="bg-foreground text-background py-8 md:py-16 relative overflow-hidden">
                 {/* Decorative background grid */}
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)]"></div>
 
-                <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center relative z-10 items-center justify-center">
+                <FadeInStagger className="grid grid-cols-3 gap-2 sm:gap-6 md:gap-12 text-center relative z-10 items-start lg:items-center justify-center">
                     <motion.div variants={{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }}>
                         <StatsCounter value={COMPANY_INFO.stats.years} suffix="+" label={t.stats.yearsLabel} />
                     </motion.div>

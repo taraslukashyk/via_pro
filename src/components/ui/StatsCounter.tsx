@@ -42,14 +42,14 @@ export const StatsCounter: React.FC<StatsCounterProps> = ({ value, suffix = '', 
     }, [smoothValue, value]);
 
     return (
-        <div ref={ref} className="space-y-2">
+        <div ref={ref} className="space-y-1 md:space-y-2">
             <div className="flex items-baseline justify-center">
-                <span ref={numberRef} className="text-6xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
+                <span ref={numberRef} className="text-4xl sm:text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
                     0
                 </span>
-                {suffix && <span className="text-4xl md:text-5xl font-bold text-white/70 ml-1">{suffix}</span>}
+                {suffix && <span className="text-2xl sm:text-4xl md:text-5xl font-bold text-white/70 ml-1">{suffix}</span>}
             </div>
-            <span className="text-sm uppercase tracking-widest opacity-60 block">{label}</span>
+            <span className="text-[10px] sm:text-xs md:text-sm uppercase tracking-normal sm:tracking-wide md:tracking-widest opacity-60 block leading-[1.1]">{label}</span>
         </div>
     );
 };
